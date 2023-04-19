@@ -1,0 +1,5 @@
+
+localparam R_Type    		= 7'h33;
+localparam I_Type_LOGIC    = 7'h13;
+localparam U_LUI_type      = 7'h34;
+localparam U_AUIPC_Type    = 7'h17;
