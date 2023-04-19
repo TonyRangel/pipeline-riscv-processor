@@ -4,7 +4,7 @@
 // Description: Data Path + Control unit integration
 // Date: April/02/23
 //////////////////////////////////////////////////////////////////////////////////
-module RISC_V_Pipeline
+module RISC_V_Single_Cycle
 (
 	input 			clk,
 	input 			reset,
