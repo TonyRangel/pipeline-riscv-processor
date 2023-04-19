@@ -38,7 +38,7 @@ output uart_tx 				//UART Ports
 
 );
 
-wire [DATA_WIDTH-1:0] pc, pc_next, pc4, pc_shift, pc_jalr, pc_jal, pc_2;
+wire [DATA_WIDTH-1:0] pc, pc_next
 //wire [DATA_WIDTH-1:0] ALUOut;
 wire [DATA_WIDTH-1:0] Adr;
 wire [DATA_WIDTH-1:0] Read_Data;
@@ -62,6 +62,20 @@ wire RAMen, RAMen_r, GPIOen, UARTen;
 wire [DATA_WIDTH-1:0] NADDR, FromMem, GPIOData, ROMDataOut, ram_out, UARTData;
 wire [1:0] DataSel;
 //--------------------------------------------------
+
+
+//------------------------
+//				IF
+//------------------------
+Mux2x1 IF_mux ( 
+													.Selector(), 
+													.I_0(), 
+													.I_1(), 
+													.Mux_Out(pc_next)
+							 );
+
+
+
 Reg_param  #
 									(
 
@@ -74,15 +88,28 @@ Reg_param  #
 												  .enable(1'b1), 
 												  .D(pc_next), 
 												  .Q(pc)
-							  );
+							      );
 
 									
 Program_Memory	ROM     (
 												  .Address			(pc),
 												  .Instruction	(Instr)
 							  );
+							  
+							  
+ALU Add_IF    (
+													.Control(4'b0000),
+													.A(pc),
+													.B(32'd4),
+													.Result(pc4)
+													
+				  );
+													
+
 					
-							
+//------------------------
+//				ID
+//------------------------							
 
 						 
 rv32i_imm_gen imm_gen  (
@@ -107,15 +134,10 @@ Reg_File Reg_file      (
                        );
 						
 
-Mux4x1 mux_a_input    ( 
-													.Selector(ALUSrcA), 
-													.I_0(rd1), 
-													.I_1(pc), 
-													.I_2(0), 
-													.I_3(0), 
-													.Mux_Out(SrcA)
-						     );							
-
+					
+//------------------------
+//				EX
+//------------------------		
 							
 							
 							
@@ -128,73 +150,24 @@ Mux4x1 mux_b_input    (
 													.Mux_Out(SrcB)
 						     );
 							 
-ALU Alu (
+ALU Alu  (
 													.Control(ALUControl),
 													.A(SrcA),
 													.B(SrcB),
 													.Result(ALUResult)
          );
-		  
-Mux2x1 Write_data_mux ( 
-													.Selector(MemtoReg), 
-													.I_0(ALUResult), 
-													.I_1(Read_Data), 
-													.Mux_Out(Write_Data)
-							 );
-							  
-Mux2x1 Branch_mux    ( 
-													.Selector(Branch_sel), 
-													.I_0(pc4), 
-													.I_1(pc_shift), 
-													.Mux_Out(pc_2)
-							);
-							  
-ALU Add_4    (
+			
+ALU Adder_EX         (
 													.Control(4'b0000),
 													.A(pc),
-													.B(32'd4),
-													.Result(pc4)
-             );
-		  
-ALU Add_shift         (
-													.Control(4'b0000),
-													.A(pc),
-													.B(Sign_Imm),
-													.Result(pc_shift)
+													.B(),
+													.Result()
                       );
-		  
-/*shift_left_one sle    (
-													.in(Sign_Imm),
-													.out(Sign_Imm_shifted)
-							 );*/
 							 
-ALU Add_JAL    (
-													.Control(4'b0000),
-													.A(pc),
-													.B(Sign_Imm),
-													.Result(pc_jal)
-					 );
-							 
-ALU Add_JALR   (
-													.Control(4'b0000),
-													.A(rd1),
-													.B(Sign_Imm),
-													.Result(pc_jalr)
-					 );
-					 
+//------------------------
+//				MEM
+//------------------------		
 
-					 
-Mux4x1 jump_mux    ( 
-													.Selector(Jump_sel), 
-													.I_0(pc_2), 
-													.I_1(pc_jal), 
-													.I_2(pc_jalr),
-													.I_3(0),
-													.Mux_Out(pc_next)
-							);
-							  
-													
-		  
 Memory_Controller #
 					(
 								.DATA_WIDTH(32), .ADDR_WIDTH(32)
@@ -251,16 +224,34 @@ GPIO gpio_0				(
 								.PORT_OUT(gpio_port_out),
 								.DataFromIn(GPIOData)
 							); 
+
+
+//------------------------
+//				WB
+//------------------------	
+			
+			
+		  
+Mux2x1 Write_data_mux ( 
+													.Selector(MemtoReg), 
+													.I_0(ALUResult), 
+													.I_1(Read_Data), 
+													.Mux_Out(Write_Data)
+							 );
+							  
+
+							  
+													
 		  
 
-							
-							
+		  
 
+						
 							
-assign Op     = Instr[6:0];
-assign Funct3 = Instr[14:12];
-assign Funct7 = Instr[31:25];
-assign Zero = !ALUResult;
+//assign Op     = Instr[6:0];
+//assign Funct3 = Instr[14:12];
+//assign Funct7 = Instr[31:25];
+//assign Zero = !ALUResult;
 
 					
 endmodule

@@ -38,7 +38,7 @@ module RISC_V_Pipeline
 	assign clk_out = clk;
 	
 	
-	Control_Unit	Control	(
+/*	Control_Unit	Control	(
 					
 									.clk				(clk),
 									.reset			(reset),
@@ -57,7 +57,7 @@ module RISC_V_Pipeline
 									.Branch_and_o	(Branch_sel_w),
 									.ALU_Control	(ALU_Control_w)
 
-								); 
+								); */
 									
 	
 	Data_Path	#
