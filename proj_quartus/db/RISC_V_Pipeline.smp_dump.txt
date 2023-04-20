@@ -1,0 +1,17 @@
+
+State Machine - |RISC_V_Pipeline|Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state
+Name Rx_state.STOP Rx_state.RX_BITS Rx_state.RESET_TIM Rx_state.WAIT_RX Rx_state.START_R Rx_state.INI_R 
+Rx_state.INI_R 0 0 0 0 0 0 
+Rx_state.START_R 0 0 0 0 1 1 
+Rx_state.WAIT_RX 0 0 0 1 0 1 
+Rx_state.RESET_TIM 0 0 1 0 0 1 
+Rx_state.RX_BITS 0 1 0 0 0 1 
+Rx_state.STOP 1 0 0 0 0 1 
+
+State Machine - |RISC_V_Pipeline|Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state
+Name Tx_state.WAIT_TX Tx_state.TX_BITS_T Tx_state.START_T Tx_state.INI_T Tx_state.STOP_T 
+Tx_state.INI_T 0 0 0 0 0 
+Tx_state.START_T 0 0 1 1 0 
+Tx_state.TX_BITS_T 0 1 0 1 0 
+Tx_state.WAIT_TX 1 0 0 1 0 
+Tx_state.STOP_T 0 0 0 1 1 

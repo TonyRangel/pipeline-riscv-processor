@@ -6,7 +6,9 @@
 ///////////////////////////////////////////////
 module Data_Path #(parameter DATA_WIDTH = 32)(
 //INPUTS
-input clk, reset,
+input clk, reset, 
+
+input FlushD, 
 
 //CONTROL SIGNALS
 
@@ -23,6 +25,8 @@ input [1:0] MemtoReg,
 input       Branch_sel,
 input [1:0] Jump_sel,
 
+input       Mux_IF_sel,
+
 
 
 output Zero,
@@ -38,12 +42,10 @@ output uart_tx 				//UART Ports
 
 );
 
-wire [DATA_WIDTH-1:0] pc, pc_next
+wire [DATA_WIDTH-1:0] pc, pc_next,adder_IF_res, adder_EX_res;
 //wire [DATA_WIDTH-1:0] ALUOut;
 wire [DATA_WIDTH-1:0] Adr;
 wire [DATA_WIDTH-1:0] Read_Data;
-
-
 wire [DATA_WIDTH-1:0] Instr;
 
 //--------------------------------------------------
@@ -68,9 +70,9 @@ wire [1:0] DataSel;
 //				IF
 //------------------------
 Mux2x1 IF_mux ( 
-													.Selector(), 
-													.I_0(), 
-													.I_1(), 
+													.Selector(Mux_IF_sel), 
+													.I_0(adder_IF_res), 
+													.I_1(adder_EX_res), 
 													.Mux_Out(pc_next)
 							 );
 
@@ -101,12 +103,24 @@ ALU Add_IF    (
 													.Control(4'b0000),
 													.A(pc),
 													.B(32'd4),
-													.Result(pc4)
+													.Result(adder_IF_res)
 													
 				  );
-													
+								
 
-					
+IF_ID pip_reg0 (
+													.clk(clk),
+													.reset(reset),
+													.clear(FlushD),
+													.enable(StallD),
+													.InstrF(InstrF),
+													.PCF(PCF),
+													.PCPlus4F(PCPlus4F),
+													.InstrD(InstrD),
+													.PCD(PCD),
+													.PCPlus4D(PCPlus4D)
+                );
+				
 //------------------------
 //				ID
 //------------------------							
@@ -159,7 +173,7 @@ ALU Alu  (
 			
 ALU Adder_EX         (
 													.Control(4'b0000),
-													.A(pc),
+													.A(adder_IF_res),
 													.B(),
 													.Result()
                       );
