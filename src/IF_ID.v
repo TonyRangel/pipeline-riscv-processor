@@ -1,3 +1,7 @@
+/*
+	Name: Pipeline register between Datapath Fetch and Decode Stage
+*/
+
 module IF_ID (
   input  clk, reset, clear, enable,
   input      [31:0] InstrF, PCF, PCPlus4F,
