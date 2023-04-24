@@ -1,4 +1,3 @@
 Info (10281): Verilog HDL Declaration information at Reg_File.v(9): object "A1" differs only in case from object "a1" in the same scope File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v Line: 9
 Info (10281): Verilog HDL Declaration information at Reg_File.v(9): object "A2" differs only in case from object "a2" in the same scope File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v Line: 9
 Info (10281): Verilog HDL Declaration information at Reg_File.v(9): object "A3" differs only in case from object "a3" in the same scope File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v Line: 9
-Info (10281): Verilog HDL Declaration information at Data_Path.v(43): object "pc" differs only in case from object "Pc" in the same scope File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 43

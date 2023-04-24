@@ -1,5 +1,5 @@
 Analysis & Synthesis report for RISC_V_Pipeline
-Wed Apr 19 23:11:20 2023
+Mon Apr 24 12:25:55 2023
 Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 
 
@@ -87,13 +87,15 @@ Quartus Prime Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
  79. Port Connectivity Checks: "Data_Path:DataPath|Mux4x1:mux_b_input"
  80. Port Connectivity Checks: "Data_Path:DataPath|Reg_File:Reg_file|Reg_param:zero"
  81. Port Connectivity Checks: "Data_Path:DataPath|Reg_File:Reg_file"
- 82. Port Connectivity Checks: "Data_Path:DataPath|ALU:Add_IF"
- 83. Port Connectivity Checks: "Data_Path:DataPath|Reg_param:Pc"
- 84. Port Connectivity Checks: "Data_Path:DataPath"
- 85. Post-Synthesis Netlist Statistics for Top Partition
- 86. Elapsed Time Per Partition
- 87. Analysis & Synthesis Messages
- 88. Analysis & Synthesis Suppressed Messages
+ 82. Port Connectivity Checks: "Data_Path:DataPath|IF_ID:pip_reg0"
+ 83. Port Connectivity Checks: "Data_Path:DataPath|ALU:Add_IF"
+ 84. Port Connectivity Checks: "Data_Path:DataPath|Program_Memory:ROM"
+ 85. Port Connectivity Checks: "Data_Path:DataPath|Reg_param:Pc"
+ 86. Port Connectivity Checks: "Data_Path:DataPath"
+ 87. Post-Synthesis Netlist Statistics for Top Partition
+ 88. Elapsed Time Per Partition
+ 89. Analysis & Synthesis Messages
+ 90. Analysis & Synthesis Suppressed Messages
 
 
 
@@ -120,7 +122,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                  ;
 +---------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status     ; Successful - Wed Apr 19 23:11:20 2023       ;
+; Analysis & Synthesis Status     ; Successful - Mon Apr 24 12:25:55 2023       ;
 ; Quartus Prime Version           ; 21.1.1 Build 850 06/23/2022 SJ Lite Edition ;
 ; Revision Name                   ; RISC_V_Pipeline                             ;
 ; Top-level Entity Name           ; RISC_V_Pipeline                             ;
@@ -274,6 +276,7 @@ https://fpgasoftware.intel.com/eula.
 ; ../src/Counter_Param.v                                                        ; yes             ; User Verilog HDL File  ; C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Counter_Param.v                ;         ;
 ; ../src/Bit_Rate_Pulse.v                                                       ; yes             ; User Verilog HDL File  ; C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Bit_Rate_Pulse.v               ;         ;
 ; ../src/ALU.v                                                                  ; yes             ; User Verilog HDL File  ; C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ALU.v                          ;         ;
+; ../src/IF_ID.v                                                                ; yes             ; User Verilog HDL File  ; C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IF_ID.v                        ;         ;
 ; /my_designs/quartusprime/risc_v_single_cycle/assembly_code/factorial_uart.txt ; yes             ; Auto-Found File        ; /my_designs/quartusprime/risc_v_single_cycle/assembly_code/factorial_uart.txt ;         ;
 +-------------------------------------------------------------------------------+-----------------+------------------------+-------------------------------------------------------------------------------+---------+
 
@@ -344,207 +347,204 @@ Encoding Type:  One-Hot
 +--------------------+------------------+--------------------+------------------+----------------+-----------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                                                                                       ;
-+----------------------------------------------------------------------------------------+-----------------------------------------------------------------+
-; Register name                                                                          ; Reason for Removal                                              ;
-+----------------------------------------------------------------------------------------+-----------------------------------------------------------------+
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[31]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[31]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[31]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[30]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[30]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[30]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[29]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[29]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[29]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[28]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[28]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[28]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[27]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[27]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[27]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[26]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[26]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[26]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[25]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[25]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[25]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[24]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[24]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[24]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[23]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[23]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[23]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[23]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[22]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[22]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[22]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[22]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[21]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[21]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[21]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[21]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[20]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[20]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[20]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[20]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[19]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[19]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[19]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[19]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[18]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[18]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[18]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[18]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[17]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[17]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[17]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[17]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[16]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[16]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[16]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[16]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[15]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[15]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[15]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[15]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[14]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[14]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[14]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[14]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[13]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[13]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[13]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[13]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[12]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[12]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[12]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[12]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[11]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[11]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[11]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[11]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[10]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[10]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[10]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[10]                                   ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[9]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[9]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[9]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[8]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[8]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[8]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[8]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[7]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[7]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[7]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[6]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[6]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[6]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[5]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[5]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[5]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[4]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[4]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[4]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[3]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[3]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[3]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[2]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[2]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[2]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[1]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[1]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[1]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[0]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[1].FF|q  ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[2].FF|q  ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[3].FF|q  ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[4].FF|q  ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[5].FF|q  ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[6].FF|q  ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[7].FF|q  ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[8].FF|q  ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[9].FF|q  ; Lost fanout                                                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[0]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t6|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t5|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t4|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t3|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s11|Q[0..31]                            ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s10|Q[0..31]                            ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s9|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s8|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s7|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s6|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s5|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s4|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s3|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s2|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:a7|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:a6|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:a5|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:a4|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:a3|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:a2|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:a1|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:a0|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s1|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s0|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t2|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t1|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t0|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:tp|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:gp|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:sp|Q[0,31]                              ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:sp|Q[13..30]                            ; Stuck at VCC due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:sp|Q[12]                                ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:sp|Q[2..11]                             ; Stuck at VCC due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:sp|Q[1]                                 ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:ra|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:zero|Q[0..31]                           ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[0..7]                                 ; Stuck at GND due to stuck port clock_enable                     ;
-; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[9]                                     ; Lost fanout                                                     ;
-; Data_Path:DataPath|Reg_param:Pc|Q[1]                                                   ; Merged with Data_Path:DataPath|Reg_param:Pc|Q[0]                ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[25..30]                                ; Merged with Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[24] ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[0,31]                                  ; Stuck at GND due to stuck port data_in                          ;
-; Data_Path:DataPath|Reg_param:Pc|Q[0]                                                   ; Stuck at GND due to stuck port data_in                          ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state~7                ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state~8                ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state~9                ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state~5                ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state~6                ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.START_T          ; Stuck at GND due to stuck port data_in                          ;
-; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[24]                                    ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|Counter_Param:Counter_bits_rx|Q[0..3]        ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|Bit_Rate_Pulse:BR_pulse_rx|count[0..12]      ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|FF_D_enable:Sampling|q    ; Lost fanout                                                     ;
-; Data_Path:DataPath|Reg_param:Pc|Q[2..31]                                               ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.INI_R            ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.START_R          ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.WAIT_RX          ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.RESET_TIM        ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.RX_BITS          ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.STOP             ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[0].FF|q ; Stuck at VCC due to stuck port data_in                          ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[1].FF|q ; Stuck at VCC due to stuck port data_in                          ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[2].FF|q ; Stuck at VCC due to stuck port data_in                          ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[3].FF|q ; Stuck at VCC due to stuck port data_in                          ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[4].FF|q ; Stuck at VCC due to stuck port data_in                          ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[5].FF|q ; Stuck at VCC due to stuck port data_in                          ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[6].FF|q ; Stuck at VCC due to stuck port data_in                          ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[7].FF|q ; Stuck at VCC due to stuck port data_in                          ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[8].FF|q ; Stuck at VCC due to stuck port data_in                          ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[9].FF|q ; Stuck at VCC due to stuck port data_in                          ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.TX_BITS_T        ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[0..12]      ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.WAIT_TX          ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.INI_T            ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Counter_Param:Counter_bits_tx|Q[0..3]        ; Lost fanout                                                     ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.STOP_T           ; Lost fanout                                                     ;
-; Total Number of Removed Registers = 1254                                               ;                                                                 ;
-+----------------------------------------------------------------------------------------+-----------------------------------------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                                                                                   ;
++----------------------------------------------------------------------------------------+---------------------------------------------+
+; Register name                                                                          ; Reason for Removal                          ;
++----------------------------------------------------------------------------------------+---------------------------------------------+
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[31]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[31]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[31]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[30]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[30]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[30]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[29]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[29]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[29]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[28]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[28]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[28]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[27]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[27]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[27]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[26]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[26]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[26]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[25]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[25]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[25]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[24]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[24]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[24]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[23]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[23]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[23]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[23]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[22]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[22]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[22]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[22]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[21]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[21]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[21]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[21]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[20]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[20]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[20]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[20]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[19]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[19]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[19]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[19]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[18]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[18]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[18]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[18]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[17]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[17]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[17]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[17]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[16]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[16]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[16]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[16]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[15]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[15]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[15]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[15]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[14]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[14]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[14]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[14]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[13]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[13]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[13]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[13]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[12]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[12]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[12]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[12]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[11]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[11]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[11]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[11]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[10]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[10]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[10]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[10]                                   ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[9]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[9]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[9]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[8]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[8]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[8]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[8]                                    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[7]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[7]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[7]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[6]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[6]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[6]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[5]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[5]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[5]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[4]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[4]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[4]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[3]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[3]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[3]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[2]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[2]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[2]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[1]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[1]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[1]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[0]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[1].FF|q  ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[2].FF|q  ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[3].FF|q  ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[4].FF|q  ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[5].FF|q  ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[6].FF|q  ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[7].FF|q  ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[8].FF|q  ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[9].FF|q  ; Lost fanout                                 ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:InReg|Q[0]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t6|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t5|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t4|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t3|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s11|Q[0..31]                            ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s10|Q[0..31]                            ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s9|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s8|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s7|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s6|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s5|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s4|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s3|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s2|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:a7|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:a6|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:a5|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:a4|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:a3|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:a2|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:a1|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:a0|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s1|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:s0|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t2|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t1|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t0|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:tp|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:gp|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:sp|Q[0,31]                              ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:sp|Q[13..30]                            ; Stuck at VCC due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:sp|Q[12]                                ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:sp|Q[2..11]                             ; Stuck at VCC due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:sp|Q[1]                                 ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:ra|Q[0..31]                             ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:zero|Q[0..31]                           ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|IF_ID:pip_reg0|InstrD[0..19,25..31]                                 ; Lost fanout                                 ;
+; Data_Path:DataPath|IF_ID:pip_reg0|InstrD[20..24]                                       ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[0..7]                                 ; Stuck at GND due to stuck port clock_enable ;
+; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[0,24..31]                              ; Stuck at GND due to stuck port data_in      ;
+; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[9]                                     ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state~7                ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state~8                ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state~9                ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state~5                ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state~6                ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.START_T          ; Stuck at GND due to stuck port data_in      ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|Counter_Param:Counter_bits_rx|Q[0..3]        ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|Bit_Rate_Pulse:BR_pulse_rx|count[0..12]      ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|FF_D_enable:Sampling|q    ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.INI_R            ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.START_R          ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.WAIT_RX          ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.RESET_TIM        ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.RX_BITS          ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.STOP             ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[0].FF|q ; Stuck at VCC due to stuck port data_in      ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[1].FF|q ; Stuck at VCC due to stuck port data_in      ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[2].FF|q ; Stuck at VCC due to stuck port data_in      ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[3].FF|q ; Stuck at VCC due to stuck port data_in      ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[4].FF|q ; Stuck at VCC due to stuck port data_in      ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[5].FF|q ; Stuck at VCC due to stuck port data_in      ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[6].FF|q ; Stuck at VCC due to stuck port data_in      ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[7].FF|q ; Stuck at VCC due to stuck port data_in      ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[8].FF|q ; Stuck at VCC due to stuck port data_in      ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[9].FF|q ; Stuck at VCC due to stuck port data_in      ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.TX_BITS_T        ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[0..12]      ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.WAIT_TX          ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.INI_T            ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Counter_Param:Counter_bits_tx|Q[0..3]        ; Lost fanout                                 ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.STOP_T           ; Lost fanout                                 ;
+; Total Number of Removed Registers = 1254                                               ;                                             ;
++----------------------------------------------------------------------------------------+---------------------------------------------+
 
 
 +----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
@@ -552,31 +552,6 @@ Encoding Type:  One-Hot
 +-------------------------------------------------------------------------------+--------------------------------+-----------------------------------------------------------------------------------------+
 ; Register name                                                                 ; Reason for Removal             ; Registers Removed due to This Register                                                  ;
 +-------------------------------------------------------------------------------+--------------------------------+-----------------------------------------------------------------------------------------+
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t6|Q[0]                        ; Stuck at GND                   ; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[0],                                    ;
-;                                                                               ; due to stuck port clock_enable ; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[0],                                     ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[24],                                    ;
-;                                                                               ;                                ; Data_Path:DataPath|Reg_param:Pc|Q[2], Data_Path:DataPath|Reg_param:Pc|Q[3],             ;
-;                                                                               ;                                ; Data_Path:DataPath|Reg_param:Pc|Q[4], Data_Path:DataPath|Reg_param:Pc|Q[5],             ;
-;                                                                               ;                                ; Data_Path:DataPath|Reg_param:Pc|Q[6], Data_Path:DataPath|Reg_param:Pc|Q[7],             ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[0].FF|q, ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[1].FF|q, ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[2].FF|q, ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[3].FF|q, ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[4].FF|q, ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[5].FF|q, ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[6].FF|q, ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[7].FF|q, ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[8].FF|q, ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[9].FF|q, ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.TX_BITS_T,        ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[7],          ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[8],          ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[9],          ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[10],         ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[11],         ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[2],          ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[1],          ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.WAIT_TX           ;
 ; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state~7       ; Lost Fanouts                   ; Data_Path:DataPath|UART:uart_0|UART_RX:RX|Counter_Param:Counter_bits_rx|Q[2],           ;
 ;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_RX:RX|Counter_Param:Counter_bits_rx|Q[1],           ;
 ;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_RX:RX|Counter_Param:Counter_bits_rx|Q[0],           ;
@@ -596,22 +571,51 @@ Encoding Type:  One-Hot
 ;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.INI_R,            ;
 ;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.WAIT_RX,          ;
 ;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.RX_BITS           ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:zero|Q[31]                     ; Stuck at GND                   ; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[31],                                    ;
+;                                                                               ; due to stuck port clock_enable ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[0].FF|q, ;
+;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[1].FF|q, ;
+;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.TX_BITS_T,        ;
+;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[7],          ;
+;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[8],          ;
+;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[9],          ;
+;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[10],         ;
+;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[11],         ;
+;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[2],          ;
+;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[1],          ;
+;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.WAIT_TX           ;
 ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state~5       ; Lost Fanouts                   ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[4],          ;
 ;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[5],          ;
 ;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[12],         ;
 ;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[0],          ;
 ;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Counter_Param:Counter_bits_tx|Q[2],           ;
 ;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Counter_Param:Counter_bits_tx|Q[1]            ;
+; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.START_T ; Stuck at GND                   ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[9].FF|q, ;
+;                                                                               ; due to stuck port data_in      ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[6],          ;
+;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[3],          ;
+;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Counter_Param:Counter_bits_tx|Q[0]            ;
 ; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[8]                            ; Lost Fanouts                   ; Data_Path:DataPath|UART:uart_0|UART_RX:RX|Counter_Param:Counter_bits_rx|Q[3],           ;
 ;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.START_R,          ;
 ;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|Rx_state.STOP              ;
-; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.START_T ; Stuck at GND                   ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[6],          ;
-;                                                                               ; due to stuck port data_in      ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx|count[3],          ;
-;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|Counter_Param:Counter_bits_tx|Q[0]            ;
 ; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[7]                            ; Lost Fanouts                   ; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[8].FF|q,  ;
 ;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[9].FF|q   ;
 ; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[0]                            ; Lost Fanouts                   ; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[1].FF|q,  ;
 ;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|FF_D_enable:Sampling|q     ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t6|Q[0]                        ; Stuck at GND                   ; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[0],                                    ;
+;                                                                               ; due to stuck port clock_enable ; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[0]                                      ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:zero|Q[30]                     ; Stuck at GND                   ; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[30],                                    ;
+;                                                                               ; due to stuck port clock_enable ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[2].FF|q  ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:zero|Q[29]                     ; Stuck at GND                   ; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[29],                                    ;
+;                                                                               ; due to stuck port clock_enable ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[3].FF|q  ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:zero|Q[28]                     ; Stuck at GND                   ; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[28],                                    ;
+;                                                                               ; due to stuck port clock_enable ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[4].FF|q  ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:zero|Q[27]                     ; Stuck at GND                   ; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[27],                                    ;
+;                                                                               ; due to stuck port clock_enable ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[5].FF|q  ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:zero|Q[26]                     ; Stuck at GND                   ; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[26],                                    ;
+;                                                                               ; due to stuck port clock_enable ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[6].FF|q  ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:zero|Q[25]                     ; Stuck at GND                   ; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[25],                                    ;
+;                                                                               ; due to stuck port clock_enable ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[7].FF|q  ;
+; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:zero|Q[24]                     ; Stuck at GND                   ; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[24],                                    ;
+;                                                                               ; due to stuck port clock_enable ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[8].FF|q  ;
 ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state~6       ; Lost Fanouts                   ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.INI_T,            ;
 ;                                                                               ;                                ; Data_Path:DataPath|UART:uart_0|UART_TX:TX|FSM_UART_tx:FSM_tx|Tx_state.STOP_T            ;
 ; Data_Path:DataPath|UART:uart_0|Register:RXReg|Q[6]                            ; Lost Fanouts                   ; Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR|FF_D_enable:FF_[7].FF|q   ;
@@ -634,8 +638,6 @@ Encoding Type:  One-Hot
 ; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t6|Q[2]                        ; Stuck at GND                   ; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[2]                                     ;
 ;                                                                               ; due to stuck port clock_enable ;                                                                                         ;
 ; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:t6|Q[1]                        ; Stuck at GND                   ; Data_Path:DataPath|GPIO:gpio_0|Register:OutReg|Q[1]                                     ;
-;                                                                               ; due to stuck port clock_enable ;                                                                                         ;
-; Data_Path:DataPath|Reg_File:Reg_file|Reg_param:zero|Q[31]                     ; Stuck at GND                   ; Data_Path:DataPath|UART:uart_0|Register:TXReg|Q[31]                                     ;
 ;                                                                               ; due to stuck port clock_enable ;                                                                                         ;
 +-------------------------------------------------------------------------------+--------------------------------+-----------------------------------------------------------------------------------------+
 
@@ -660,8 +662,7 @@ Encoding Type:  One-Hot
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
 ; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                                                              ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
-; 3:1                ; 2 bits    ; 4 LEs         ; 2 LEs                ; 2 LEs                  ; Yes        ; |RISC_V_Pipeline|Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[9].FF|q ;
-; 3:1                ; 7 bits    ; 14 LEs        ; 7 LEs                ; 7 LEs                  ; Yes        ; |RISC_V_Pipeline|Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[8].FF|q ;
+; 3:1                ; 9 bits    ; 18 LEs        ; 9 LEs                ; 9 LEs                  ; Yes        ; |RISC_V_Pipeline|Data_Path:DataPath|UART:uart_0|UART_TX:TX|TXshift_register:SR|FF_D_2enable:FF_[9].FF|q ;
 +--------------------+-----------+---------------+----------------------+------------------------+------------+---------------------------------------------------------------------------------------------------------+
 
 
@@ -1338,15 +1339,16 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+-------+----------+--------------------------------------------+
 
 
-+-------------------------------------------------------------+
-; Port Connectivity Checks: "Data_Path:DataPath|ALU:Adder_EX" ;
-+---------+--------+----------+-------------------------------+
-; Port    ; Type   ; Severity ; Details                       ;
-+---------+--------+----------+-------------------------------+
-; Control ; Input  ; Info     ; Stuck at GND                  ;
-; B       ; Input  ; Info     ; Explicitly unconnected        ;
-; Result  ; Output ; Info     ; Explicitly unconnected        ;
-+---------+--------+----------+-------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Data_Path:DataPath|ALU:Adder_EX"                                                                                                               ;
++---------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                                                                                     ;
++---------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Control ; Input  ; Info     ; Stuck at GND                                                                                                                                ;
+; A       ; Input  ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "A[31..1]" will be connected to GND. ;
+; B       ; Input  ; Info     ; Explicitly unconnected                                                                                                                      ;
+; Result  ; Output ; Info     ; Explicitly unconnected                                                                                                                      ;
++---------+--------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------------+
@@ -1379,16 +1381,36 @@ Note: In order to hide this table in the UI and the text report file, please set
 +------+--------+----------+-------------------------------------------------------------------------------------+
 
 
-+-----------------------------------------------------------+
-; Port Connectivity Checks: "Data_Path:DataPath|ALU:Add_IF" ;
-+----------+-------+----------+-----------------------------+
-; Port     ; Type  ; Severity ; Details                     ;
-+----------+-------+----------+-----------------------------+
-; Control  ; Input ; Info     ; Stuck at GND                ;
-; B[31..3] ; Input ; Info     ; Stuck at GND                ;
-; B[1..0]  ; Input ; Info     ; Stuck at GND                ;
-; B[2]     ; Input ; Info     ; Stuck at VCC                ;
-+----------+-------+----------+-----------------------------+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Data_Path:DataPath|IF_ID:pip_reg0"                                                      ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; PCD      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; PCPlus4D ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Data_Path:DataPath|ALU:Add_IF"                                                                                                                 ;
++----------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Port     ; Type  ; Severity ; Details                                                                                                                                     ;
++----------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+; Control  ; Input ; Info     ; Stuck at GND                                                                                                                                ;
+; A        ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "A[31..1]" will be connected to GND. ;
+; B[31..3] ; Input ; Info     ; Stuck at GND                                                                                                                                ;
+; B[1..0]  ; Input ; Info     ; Stuck at GND                                                                                                                                ;
+; B[2]     ; Input ; Info     ; Stuck at VCC                                                                                                                                ;
++----------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "Data_Path:DataPath|Program_Memory:ROM"                                                                                                              ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Port    ; Type  ; Severity ; Details                                                                                                                                           ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
+; Address ; Input ; Warning  ; Input port expression (1 bits) is smaller than the input port (32 bits) it drives.  Extra input bit(s) "Address[31..1]" will be connected to GND. ;
++---------+-------+----------+---------------------------------------------------------------------------------------------------------------------------------------------------+
 
 
 +-------------------------------------------------------------+
@@ -1409,6 +1431,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; Op         ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
 ; Funct3     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
 ; Funct7     ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed.                                                          ;
+; FlushD     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
+; StallD     ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 ; Mux_IF_sel ; Input  ; Warning  ; Declared by entity but not connected by instance. If a default value exists, it will be used.  Otherwise, the port will be connected to GND. ;
 +------------+--------+----------+----------------------------------------------------------------------------------------------------------------------------------------------+
 
@@ -1443,7 +1467,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 21.1.1 Build 850 06/23/2022 SJ Lite Edition
-    Info: Processing started: Wed Apr 19 23:11:07 2023
+    Info: Processing started: Mon Apr 24 12:25:45 2023
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off RISC_V_Pipeline -c RISC_V_Pipeline
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
@@ -1510,31 +1534,34 @@ Info (12021): Found 1 design units, including 1 entities, in source file /my_des
     Info (12023): Found entity 1: ALU File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ALU.v Line: 7
 Info (12021): Found 1 design units, including 1 entities, in source file /my_designs/quartusprime/risc_v_pipeline/src/if_id.v
     Info (12023): Found entity 1: IF_ID File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IF_ID.v Line: 1
+Warning (10236): Verilog HDL Implicit Net warning at Data_Path.v(103): created implicit net for "pc" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 103
+Warning (10236): Verilog HDL Implicit Net warning at Data_Path.v(182): created implicit net for "adder_IF_res" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 182
 Info (12127): Elaborating entity "RISC_V_Pipeline" for the top level hierarchy
 Info (12128): Elaborating entity "Data_Path" for hierarchy "Data_Path:DataPath" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v Line: 91
-Warning (10034): Output port "Op" at Data_Path.v(31) has no driver File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 31
-Warning (10034): Output port "Funct3" at Data_Path.v(32) has no driver File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 32
-Warning (10034): Output port "Funct7" at Data_Path.v(33) has no driver File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 33
-Warning (10034): Output port "Zero" at Data_Path.v(30) has no driver File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 30
-Info (12128): Elaborating entity "Mux2x1" for hierarchy "Data_Path:DataPath|Mux2x1:IF_mux" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 75
-Info (12128): Elaborating entity "Reg_param" for hierarchy "Data_Path:DataPath|Reg_param:Pc" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 91
-Info (12128): Elaborating entity "Program_Memory" for hierarchy "Data_Path:DataPath|Program_Memory:ROM" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 97
+Warning (10034): Output port "Op" at Data_Path.v(33) has no driver File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 33
+Warning (10034): Output port "Funct3" at Data_Path.v(34) has no driver File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 34
+Warning (10034): Output port "Funct7" at Data_Path.v(35) has no driver File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 35
+Warning (10034): Output port "Zero" at Data_Path.v(32) has no driver File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 32
+Info (12128): Elaborating entity "Mux2x1" for hierarchy "Data_Path:DataPath|Mux2x1:IF_mux" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 83
+Info (12128): Elaborating entity "Reg_param" for hierarchy "Data_Path:DataPath|Reg_param:Pc" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 99
+Info (12128): Elaborating entity "Program_Memory" for hierarchy "Data_Path:DataPath|Program_Memory:ROM" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 105
 Warning (10850): Verilog HDL warning at Program_Memory.v(32): number of words (40) in memory file does not match the number of elements in the address range [0:63] File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Program_Memory.v Line: 32
 Warning (10235): Verilog HDL Always Construct warning at Program_Memory.v(42): variable "ADDRIn" is read inside the Always Construct but isn't in the Always Construct's Event Control File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Program_Memory.v Line: 42
 Warning (10030): Net "rom.data_a" at Program_Memory.v(18) has no driver or initial value, using a default initial value '0' File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Program_Memory.v Line: 18
 Warning (10030): Net "rom.waddr_a" at Program_Memory.v(18) has no driver or initial value, using a default initial value '0' File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Program_Memory.v Line: 18
 Warning (10030): Net "rom.we_a" at Program_Memory.v(18) has no driver or initial value, using a default initial value '0' File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Program_Memory.v Line: 18
-Info (12128): Elaborating entity "ALU" for hierarchy "Data_Path:DataPath|ALU:Add_IF" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 106
-Info (12128): Elaborating entity "rv32i_imm_gen" for hierarchy "Data_Path:DataPath|rv32i_imm_gen:imm_gen" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 124
-Info (12128): Elaborating entity "Reg_File" for hierarchy "Data_Path:DataPath|Reg_File:Reg_file" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 134
+Info (12128): Elaborating entity "ALU" for hierarchy "Data_Path:DataPath|ALU:Add_IF" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 114
+Info (12128): Elaborating entity "IF_ID" for hierarchy "Data_Path:DataPath|IF_ID:pip_reg0" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 128
+Info (12128): Elaborating entity "rv32i_imm_gen" for hierarchy "Data_Path:DataPath|rv32i_imm_gen:imm_gen" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 144
+Info (12128): Elaborating entity "Reg_File" for hierarchy "Data_Path:DataPath|Reg_File:Reg_file" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 154
 Info (12128): Elaborating entity "Decoder_Onehot" for hierarchy "Data_Path:DataPath|Reg_File:Reg_file|Decoder_Onehot:dec" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v Line: 19
 Info (12128): Elaborating entity "Reg_param" for hierarchy "Data_Path:DataPath|Reg_File:Reg_file|Reg_param:zero" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v Line: 21
 Info (12128): Elaborating entity "Reg_param" for hierarchy "Data_Path:DataPath|Reg_File:Reg_file|Reg_param:sp" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v Line: 23
 Info (12128): Elaborating entity "Mux" for hierarchy "Data_Path:DataPath|Reg_File:Reg_file|Mux:Mux1to32_1" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v Line: 93
-Info (12128): Elaborating entity "Mux4x1" for hierarchy "Data_Path:DataPath|Mux4x1:mux_b_input" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 151
-Info (12128): Elaborating entity "Memory_Controller" for hierarchy "Data_Path:DataPath|Memory_Controller:MemCtrl" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 186
-Info (12128): Elaborating entity "Data_Memory" for hierarchy "Data_Path:DataPath|Data_Memory:RAM" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 204
-Info (12128): Elaborating entity "UART" for hierarchy "Data_Path:DataPath|UART:uart_0" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 215
+Info (12128): Elaborating entity "Mux4x1" for hierarchy "Data_Path:DataPath|Mux4x1:mux_b_input" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 171
+Info (12128): Elaborating entity "Memory_Controller" for hierarchy "Data_Path:DataPath|Memory_Controller:MemCtrl" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 206
+Info (12128): Elaborating entity "Data_Memory" for hierarchy "Data_Path:DataPath|Data_Memory:RAM" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 224
+Info (12128): Elaborating entity "UART" for hierarchy "Data_Path:DataPath|UART:uart_0" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 235
 Info (12128): Elaborating entity "Register" for hierarchy "Data_Path:DataPath|UART:uart_0|Register:TXReg" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART.v Line: 27
 Info (12128): Elaborating entity "UART_TX" for hierarchy "Data_Path:DataPath|UART:uart_0|UART_TX:TX" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART.v Line: 46
 Info (12128): Elaborating entity "Bit_Rate_Pulse" for hierarchy "Data_Path:DataPath|UART:uart_0|UART_TX:TX|Bit_Rate_Pulse:BR_pulse_tx" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_TX.v Line: 30
@@ -1547,11 +1574,10 @@ Info (12128): Elaborating entity "Bit_Rate_Pulse" for hierarchy "Data_Path:DataP
 Info (12128): Elaborating entity "FSM_UART_rx" for hierarchy "Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_RX.v Line: 34
 Info (12128): Elaborating entity "FF_D_enable" for hierarchy "Data_Path:DataPath|UART:uart_0|UART_RX:RX|FSM_UART_rx:FSM_rx|FF_D_enable:Sampling" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FSM_UART_rx.v Line: 160
 Info (12128): Elaborating entity "RXshift_register" for hierarchy "Data_Path:DataPath|UART:uart_0|UART_RX:RX|RXshift_register:SR" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_RX.v Line: 50
-Info (12128): Elaborating entity "GPIO" for hierarchy "Data_Path:DataPath|GPIO:gpio_0" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 226
-Info (276014): Found 1 instances of uninferred RAM logic
-    Info (276004): RAM logic "Data_Path:DataPath|Program_Memory:ROM|rom" is uninferred due to inappropriate RAM size File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Program_Memory.v Line: 18
-Warning (127007): Memory Initialization File or Hexadecimal (Intel-Format) File "C:/My_Designs/QuartusPrime/RISC_V_Pipeline/proj_quartus/db/RISC_V_Pipeline.ram0_Program_Memory_ea1e9648.hdl.mif" contains "don't care" values -- overwriting them with 0s
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Info (12128): Elaborating entity "GPIO" for hierarchy "Data_Path:DataPath|GPIO:gpio_0" File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 246
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "Data_Path:DataPath|pc" is missing source, defaulting to GND File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 103
+Warning (12241): 5 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "GPIO_out[0]" is stuck at GND File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v Line: 15
     Warning (13410): Pin "GPIO_out[1]" is stuck at GND File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v Line: 15
@@ -1562,7 +1588,7 @@ Warning (13024): Output pins are stuck at VCC or GND
     Warning (13410): Pin "GPIO_out[6]" is stuck at GND File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v Line: 15
     Warning (13410): Pin "GPIO_out[7]" is stuck at GND File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v Line: 15
     Warning (13410): Pin "uart_tx" is stuck at VCC File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v Line: 19
-Info (17049): 201 registers lost all their fanouts during netlist optimizations.
+Info (17049): 197 registers lost all their fanouts during netlist optimizations.
 Info (144001): Generated suppressed messages file C:/My_Designs/QuartusPrime/RISC_V_Pipeline/proj_quartus/output_files/RISC_V_Pipeline.map.smsg
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
@@ -1580,11 +1606,11 @@ Warning (21074): Design contains 10 input pin(s) that do not drive logic
 Info (21057): Implemented 21 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 10 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 34 warnings
-    Info: Peak virtual memory: 4821 megabytes
-    Info: Processing ended: Wed Apr 19 23:11:20 2023
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:28
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 37 warnings
+    Info: Peak virtual memory: 4829 megabytes
+    Info: Processing ended: Mon Apr 24 12:25:55 2023
+    Info: Elapsed time: 00:00:10
+    Info: Total CPU time (on all processors): 00:00:21
 
 
 +------------------------------------------+

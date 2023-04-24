@@ -1,14 +1,14 @@
 ///////////////////////////////////////////////
 //Company: ITESO
 //Engineer: Antonio Rangel Avila  
-//Module Description: Data path, RISC-V 32bits multi-cycle,parameterized;
-//Date: March 4th 2023
+//Module Description: Data path, RISC-V 32bits m-cycle,parameterized;
+//Date: April 24th 2023
 ///////////////////////////////////////////////
 module Data_Path #(parameter DATA_WIDTH = 32)(
 //INPUTS
 input clk, reset, 
 
-input FlushD, 
+input FlushD, StallD,
 
 //CONTROL SIGNALS
 
@@ -42,12 +42,18 @@ output uart_tx 				//UART Ports
 
 );
 
-wire [DATA_WIDTH-1:0] pc, pc_next,adder_IF_res, adder_EX_res;
-//wire [DATA_WIDTH-1:0] ALUOut;
+//--------------------------------------------------
+wire [DATA_WIDTH-1:0] adder_EX_res;
+wire [DATA_WIDTH-1:0] pc_next, pc_f, pc_d, PCPlus4F, PCPlus4D;
+
+
 wire [DATA_WIDTH-1:0] Adr;
 wire [DATA_WIDTH-1:0] Read_Data;
-wire [DATA_WIDTH-1:0] Instr;
 
+wire [DATA_WIDTH-1:0] InstrF, InstrD;
+
+
+//wire [DATA_WIDTH-1:0] ALUOut;
 //--------------------------------------------------
 wire [DATA_WIDTH-1:0] Write_Data;
 wire [DATA_WIDTH-1:0] Data;
@@ -71,7 +77,7 @@ wire [1:0] DataSel;
 //------------------------
 Mux2x1 IF_mux ( 
 													.Selector(Mux_IF_sel), 
-													.I_0(adder_IF_res), 
+													.I_0(PCPlus4F), 
 													.I_1(adder_EX_res), 
 													.Mux_Out(pc_next)
 							 );
@@ -89,13 +95,13 @@ Reg_param  #
 												  .clk(clk), 
 												  .enable(1'b1), 
 												  .D(pc_next), 
-												  .Q(pc)
+												  .Q(pc_f)
 							      );
 
 									
 Program_Memory	ROM     (
 												  .Address			(pc),
-												  .Instruction	(Instr)
+												  .Instruction	(InstrF)
 							  );
 							  
 							  
@@ -103,7 +109,7 @@ ALU Add_IF    (
 													.Control(4'b0000),
 													.A(pc),
 													.B(32'd4),
-													.Result(adder_IF_res)
+													.Result(PCPlus4F)
 													
 				  );
 								
@@ -114,10 +120,10 @@ IF_ID pip_reg0 (
 													.clear(FlushD),
 													.enable(StallD),
 													.InstrF(InstrF),
-													.PCF(PCF),
+													.PCF(pc_f),
 													.PCPlus4F(PCPlus4F),
 													.InstrD(InstrD),
-													.PCD(PCD),
+													.PCD(pc_d),
 													.PCPlus4D(PCPlus4D)
                 );
 				
@@ -127,21 +133,21 @@ IF_ID pip_reg0 (
 
 						 
 rv32i_imm_gen imm_gen  (
-												  .opcode(Instr[6:0]),
-												  .funct3(Instr[14:12]),
-												  .rs1(Instr[19:15]),
-												  .rs2(Instr[24:20]),
-												  .rd(Instr[11:7]),
-												  .funct7(Instr[31:25]),
-												  .imm_in(Instr[31:20]),
+												  .opcode(InstrD[6:0]),
+												  .funct3(InstrD[14:12]),
+												  .rs1(InstrD[19:15]),
+												  .rs2(InstrD[24:20]),
+												  .rd(InstrD[11:7]),
+												  .funct7(InstrD[31:25]),
+												  .imm_in(InstrD[31:20]),
 												  .imm(Sign_Imm)
 												 );
 								
 							
 Reg_File Reg_file      (
-													.A1(Instr[19:15]),  
-													.A2(Instr[24:20]), 
-													.A3(Instr[11:7]),
+													.A1(InstrD[19:15]),  
+													.A2(InstrD[24:20]), 
+													.A3(InstrD[11:7]),
 												   .rst(reset), .clk(clk), 
 											   	.WE3(RegWrite), .WD3(Write_Data),
 													.RD1(rd1), .RD2(rd2)
