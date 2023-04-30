@@ -11,7 +11,7 @@ input [1:0] ALUSrcBD,
 input [1:0] ResultSrcD, 
 input [3:0] ALUControlD,
   
-output reg RegWriteE, MemWriteE, JumpE, BranchE,  ALUSrcAE,
+output  RegWriteE, MemWriteE, JumpE, BranchE,  ALUSrcAE,
 output reg [1:0] ALUSrcBE,
 output reg [1:0] ResultSrcE,
 output reg [3:0] ALUControlE);

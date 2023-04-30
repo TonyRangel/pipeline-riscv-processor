@@ -1,7 +1,7 @@
 |RISC_V_Pipeline
 clk => clk.IN1
 reset => reset.IN1
-clk_out <= clk.DB_MAX_OUTPUT_PORT_TYPE
+clk_out << clk.DB_MAX_OUTPUT_PORT_TYPE
 GPIO_in[0] => GPIO_in[0].IN1
 GPIO_in[1] => GPIO_in[1].IN1
 GPIO_in[2] => GPIO_in[2].IN1
@@ -10,16 +10,16 @@ GPIO_in[4] => GPIO_in[4].IN1
 GPIO_in[5] => GPIO_in[5].IN1
 GPIO_in[6] => GPIO_in[6].IN1
 GPIO_in[7] => GPIO_in[7].IN1
-GPIO_out[0] <= Data_Path:DataPath.gpio_port_out
-GPIO_out[1] <= Data_Path:DataPath.gpio_port_out
-GPIO_out[2] <= Data_Path:DataPath.gpio_port_out
-GPIO_out[3] <= Data_Path:DataPath.gpio_port_out
-GPIO_out[4] <= Data_Path:DataPath.gpio_port_out
-GPIO_out[5] <= Data_Path:DataPath.gpio_port_out
-GPIO_out[6] <= Data_Path:DataPath.gpio_port_out
-GPIO_out[7] <= Data_Path:DataPath.gpio_port_out
+GPIO_out[0] << Data_Path:DataPath.gpio_port_out
+GPIO_out[1] << Data_Path:DataPath.gpio_port_out
+GPIO_out[2] << Data_Path:DataPath.gpio_port_out
+GPIO_out[3] << Data_Path:DataPath.gpio_port_out
+GPIO_out[4] << Data_Path:DataPath.gpio_port_out
+GPIO_out[5] << Data_Path:DataPath.gpio_port_out
+GPIO_out[6] << Data_Path:DataPath.gpio_port_out
+GPIO_out[7] << Data_Path:DataPath.gpio_port_out
 uart_rx => uart_rx.IN1
-uart_tx <= Data_Path:DataPath.uart_tx
+uart_tx << Data_Path:DataPath.uart_tx
 
 
 |RISC_V_Pipeline|Data_Path:DataPath

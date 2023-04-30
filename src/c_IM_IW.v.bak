@@ -5,11 +5,11 @@
 
 
 module c_IM_IW (
-input            clk, reset, 
-input            RegWriteM, 
-input      [1:0] ResultSrcM, 
-output reg       RegWriteW, 
-output reg [1:0] ResultSrcW);
+input        clk, reset, 
+input        RegWriteM, 
+input  [1:0] ResultSrcM, 
+output       RegWriteW, 
+output [1:0] ResultSrcW);
 
     always @( posedge clk, posedge reset ) begin
         if (reset) begin

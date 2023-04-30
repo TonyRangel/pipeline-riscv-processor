@@ -10,7 +10,7 @@ input      [1:0] ResultSrcE,
 output reg       RegWriteM, MemWriteM,
 output reg [1:0] ResultSrcM);
 
-    always @( posedge clk, posedge reset ) begin
+    always_ff @( posedge clk, posedge reset ) begin
         if (reset) begin
             RegWriteM <= 0;
             MemWriteM <= 0;
