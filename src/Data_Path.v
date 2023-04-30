@@ -11,12 +11,12 @@ input clk, reset,
 
 input [3:0] ALUControlE, 
 
-input       RegWrite,   
+input       RegWriteW,   
 input [1:0] ALUSrcA, 
 input [1:0] ALUSrcB,    
-input       MemWrite,      
-input       MemRead,          
-input [1:0] MemtoReg, 
+input       MemWriteM,      
+input       MemReadM,          
+input [1:0] MemtoRegW, 
 input       Branch_sel,
 input [1:0] Jump_sel,
 input       Mux_IF_sel,
@@ -61,11 +61,15 @@ wire [DATA_WIDTH-1:0] InstrF, InstrD;
 
 wire [DATA_WIDTH-1:0] rd1D, rd2D, RdD;
 
-wire [DATA_WIDTH-1:0] rd1E, rd2E, SrcAE, SrcBE, ALUResultE, PCTargetE, WriteDataE;
+wire [DATA_WIDTH-1:0] rd1E, rd2E, SrcAE, SrcBE, ALUResultE, PCTargetE, WriteDataE, SrcAEfor;
 
-wire [DATA_WIDTH-1:0] ALUResultM, WriteDataM, PCPlus4M; 
+wire [DATA_WIDTH-1:0] ALUResultM, ReadDataM, WriteDataM, PCPlus4M; 
 
-wire [4:0] RdE, RdM;
+wire [DATA_WIDTH-1:0] ALUResultW, ReadDataW, PCPlus4W;
+
+wire [4:0] RdE, RdM, RdW;
+
+
 
 wire ZeroE;
 
@@ -84,7 +88,7 @@ wire [DATA_WIDTH-1:0] Sign_ImmD, Sign_ImmE;
 
 
 wire [DATA_WIDTH-1:0] Adr;
-wire [DATA_WIDTH-1:0] Read_Data;
+
 
 
 
@@ -194,7 +198,7 @@ Reg_File Reg_file      (
 													.A2(InstrD[24:20]), 
 													.A3(InstrD[11:7]),
 												   .rst(reset), .clk(clk), 
-											   	.WE3(RegWrite), .WD3(Write_Data),
+											   	.WE3(RegWriteW), .WD3(Write_Data),
 													.RD1(rd1D), .RD2(rd2D)
                        );
 
@@ -234,7 +238,7 @@ ID_IEx pip_reg1       (
 							 
 Mux4x1 forwardMuxA (
 
-                                       .Selector(ForwardAE),
+                                       .Selector(2'b00),//ForwardAE
 													.I_0(rd1E),
 													.I_1(32'b0),
 													.I_2(32'b0),
@@ -255,7 +259,7 @@ Mux2x1 srcamux    (
 							 
 Mux4x1 forwardMuxB (
 
-                                       .Selector(ForwardBE),
+                                       .Selector(2'b00),//ForwardEB
 													.I_0(Rs2E),
 													.I_1(32'b0),
 													.I_2(32'b0),
@@ -300,19 +304,16 @@ IEx_IMem pipreg2     (
 													.WriteDataE(WriteDataE), 
 													.RdE(RdE), 
 													.PCPlus4E(PCPlus4E),
+													.ZeroE(ZeroE),
 													.ALUResultM(ALUResultM), 
 													.WriteDataM(WriteDataM),
 													.RdM(RdM), 
-													.PCPlus4M(PCPlus4M)
+													.PCPlus4M(PCPlus4M),
+													.ZeroM(ZeroM)
                     );
 							 
 
-			
 
-							 
-//------------------------
-//				MEM
-//------------------------		
 
 Memory_Controller #
 					(
@@ -320,8 +321,8 @@ Memory_Controller #
 					) 
 					MemCtrl
 					(
-								.WrtEn(MemWrite),
-								.RdEn(MemRead),
+								.WrtEn(MemWriteM),
+								.RdEn(MemReadM),
 								.ADDRIn(ALUResultM),
 								.RAM_En(RAMen),
 								.RAM_rd_En(RAMen_r),
@@ -337,7 +338,7 @@ Mux4x1 peripheral_mux (
 								.I_1(UARTData), 
 								.I_2(GPIOData), 
 								.I_3(0), 
-								.Mux_Out(Read_Data)
+								.Mux_Out(ReadDataM)
 							);
 					
 Data_Memory		RAM 	(
@@ -371,17 +372,28 @@ GPIO gpio_0				(
 								.DataFromIn(GPIOData)
 							); 
 
+// Memory - Register Write Back Stage
 
-//------------------------
-//				WB
-//------------------------	
+IMem_IWB pipreg3     (
+													.clk(clk), 
+													.reset(reset),
+													.ALUResultM(ALUResultM), 
+													.ReadDataM(ReadDataM),  
+													.RdM(RdM), 
+													.PCPlus4M(PCPlus4M),
+													
+													.ALUResultW(ALUResultW), 
+													.ReadDataW(ReadDataW),
+													.RdW(RdW), 
+													.PCPlus4W(PCPlus4W)
+							);
 			
 			
 		  
 Mux2x1 Write_data_mux ( 
-													.Selector(MemtoReg), 
-													.I_0(ALUResult), 
-													.I_1(Read_Data), 
+													.Selector(MemtoRegW), 
+													.I_0(ALUResultW), 
+													.I_1(ReadDataW), 
 													.Mux_Out(Write_Data)
 							 );
 							  
