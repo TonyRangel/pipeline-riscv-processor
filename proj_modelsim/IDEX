@@ -1,0 +1,46 @@
+onerror {resume}
+quietly WaveActivateNextPane {} 0
+add wave -noupdate /RISC_V_Pipeline_tb/clk
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/clk
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/reset
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/clear
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/RD1D
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/RD2D
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/PCD
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/Rs1D
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/Rs2D
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/RdD
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/ImmExtD
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/PCPlus4D
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/OpD
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/Funct7D
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/Funct3D
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/RD1E
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/RD2E
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/PCE
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/Rs1E
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/Rs2E
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/RdE
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/ImmExtE
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/PCPlus4E
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/OpE
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/Funct7E
+add wave -noupdate /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/Funct3E
+TreeUpdate [SetDefaultTree]
+WaveRestoreCursors {{Cursor 1} {99393 ps} 0}
+quietly wave cursor active 1
+configure wave -namecolwidth 322
+configure wave -valuecolwidth 100
+configure wave -justifyvalue left
+configure wave -signalnamewidth 0
+configure wave -snapdistance 10
+configure wave -datasetprefix 0
+configure wave -rowmargin 4
+configure wave -childrowmargin 2
+configure wave -gridoffset 0
+configure wave -gridperiod 1
+configure wave -griddelta 40
+configure wave -timeline 0
+configure wave -timelineunits ps
+update
+WaveRestoreZoom {0 ps} {117703 ps}

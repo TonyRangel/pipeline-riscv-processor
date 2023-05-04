@@ -27,7 +27,7 @@ output  [3:0] ALUControlE);
 wire 	  [1:0] ALUOpD;
 wire 	  [1:0] ResultSrcD, ResultSrcE, ResultSrcM;
 wire    [3:0] ALUControlD;
-wire          BranchD_q, BranchD_n, BranchE, MemWriteD, MemWriteE, JumpD, JumpE;
+wire          BranchD ,BranchD_q, BranchD_n, BranchE, MemWriteD, MemWriteE, JumpD, JumpE;
 wire          ZeroOp, ALUSrcAD, RegWriteD, RegWriteE;
 wire    [1:0] ALUSrcBD;
 wire 			  SignOp;
@@ -40,12 +40,13 @@ control_signals ctl_sig(
 												.Funct3(funct3),
 												.ResultSrc(ResultSrcD),
 												.MemWrite(MemWriteD),
-												.Branchq(BranchD_q), 
-												.Branchn(BranchD_n), 
+												.Branch(BranchD), 
+												
+											   
 												.ALUSrcA(ALUSrcAD), 
 												.ALUSrcB(ALUSrcBD),
-												.RegWrite(), 
-												.Jump(RegWriteD),
+												.RegWrite(RegWriteD), 
+												.Jump(JumpD),
 												.ImmSrc(ImmSrcD),
 												.ALUOp(ALUOpD)
 
@@ -67,41 +68,41 @@ aludec aludec				(
 //										RegWriteE, MemWriteE, JumpE, BranchE, ALUSrcAE, ALUSrcBE, ResultSrcE, ALUControlE);
 										
 c_ID_IEx c_pipreg0      (
-												.clk(), .reset(), .clear(),
-												.RegWriteD(), .MemWriteD(), 
-												.JumpD(), .BranchD(), .ALUSrcAD(),
-												.ALUSrcBD(),
-												.ResultSrcD(), 
-												.ALUControlD(),
+												.clk(clk), .reset(reset), .clear(FlushE),
+												.RegWriteD(RegWriteD), .MemWriteD(MemWriteD), 
+												.JumpD(JumpD), .BranchD(BranchD), .ALUSrcAD(ALUSrcAD),
+												.ALUSrcBD(ALUSrcBD),
+												.ResultSrcD(ResultSrcD), 
+												.ALUControlD(ALUControlD),
 												  
-												.RegWriteE(), 
-												.MemWriteE(), 
-												.JumpE(), 
-												.BranchE(),  
-												.ALUSrcAE(),
-												.ALUSrcBE(),
-												.ResultSrcE(),
-												.ALUControlE()
+												.RegWriteE(RegWriteE), 
+												.MemWriteE(MemWriteE), 
+												.JumpE(JumpE), 
+												.BranchE(BranchE),  
+												.ALUSrcAE(ALUSrcAE),
+												.ALUSrcBE(ALUSrcBE),
+												.ResultSrcE(ResultSrcE),
+												.ALUControlE(ALUControlE)
                         );
 
 assign ResultSrcE0 = ResultSrcE[0];
 
 //c_IEx_IM c_pipreg1(clk, reset, RegWriteE, MemWriteE, ResultSrcE, RegWriteM,  MemWriteM, ResultSrcM);
 c_IEx_IM c_pipreg1(
-												.clk(), .reset(),
-												.RegWriteE(), .MemWriteE(),
-												.ResultSrcE(),  
-												.RegWriteM(), .MemWriteM(),
-												.ResultSrcM()
+												.clk(clk), .reset(reset),
+												.RegWriteE(RegWriteE), .MemWriteE(MemWriteE),
+												.ResultSrcE(ResultSrcE),  
+												.RegWriteM(RegWriteM), .MemWriteM(MemWriteM),
+												.ResultSrcM(ResultSrcM)
 );
 
 //c_IM_IW c_pipreg2 (clk, reset, RegWriteM, ResultSrcM, RegWriteW, ResultSrcW);
 c_IM_IW c_pipreg2(
-												.clk(), .reset(), 
-												.RegWriteM(), 
-												.ResultSrcM(), 
-												.RegWriteW(), 
-												.ResultSrcW()
+												.clk(clk), .reset(reset), 
+												.RegWriteM(RegWriteM), 
+												.ResultSrcM(ResultSrcM), 
+												.RegWriteW(RegWriteW), 
+												.ResultSrcW(ResultSrcW)
 );
 
 assign ZeroOp = ZeroE ^ funct3[0]; // Complements Zero flag for BNE Instruction

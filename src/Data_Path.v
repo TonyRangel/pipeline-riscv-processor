@@ -9,34 +9,35 @@ module Data_Path #(parameter DATA_WIDTH = 32)(
 input clk, reset, 
 
 
+
+
+input PCJalSrcE, PCSrcE, ALUSrcAE, 
+input [1:0] ALUSrcBE,
+input       RegWriteW,   
 input [3:0] ALUControlE, 
 
-input       RegWriteW,   
-input [1:0] ALUSrcA, 
-input [1:0] ALUSrcB,    
 input       MemWriteM,      
 input       MemReadM,          
 input [1:0] MemtoRegW, 
 input       Branch_sel,
-input [1:0] Jump_sel,
 input       Mux_IF_sel,
 
-input       FlushD, FlushE, StallD, StallE,
-input [1:0] ForwardAE, ForwardBE,
 
 
 
 
-output wire       ZeroM,
+output            ZeroE, SignE,
 output wire [6:0] OpD,
 output wire [2:0] Funct3D,
 output wire [6:0] Funct7D,
 
 
+
+
+input[1:0] ForwardAE, ForwardBE,
 output wire [4:0] Rs1D, Rs2D, Rs1E, Rs2E,
-
-
-//output wire [4:0] RdE,
+output wire [4:0] RdE, RdM, RdW,
+input  StallD, StallF, FlushD, FlushE,
 
 
  
@@ -51,6 +52,7 @@ input uart_rx, 				//UART Ports
 output uart_tx 				//UART Ports
 
 );
+
 
 //--------------------------------------------------
 wire [DATA_WIDTH-1:0] adder_EX_res;
@@ -67,22 +69,24 @@ wire [DATA_WIDTH-1:0] ALUResultM, ReadDataM, WriteDataM, PCPlus4M;
 
 wire [DATA_WIDTH-1:0] ALUResultW, ReadDataW, PCPlus4W;
 
-wire [4:0] RdE, RdM, RdW;
+//wire [4:0] RdE, RdM, RdW;
+
+wire [DATA_WIDTH-1:0] ResultW, BranJumpTargetE;
 
 
 
-wire ZeroE;
+
 
 
 wire [6:0] OpE;
 wire [2:0] Funct3E;
 wire [6:0] Funct7E;
 
-wire 						 ALUSrcAE;
-wire [1:0]  		    ALUSrcBE;
 
 
-wire [DATA_WIDTH-1:0] Sign_ImmD, Sign_ImmE;
+
+
+wire [DATA_WIDTH-1:0] ImmExtD, ImmExtE;
 
 
 
@@ -95,7 +99,7 @@ wire [DATA_WIDTH-1:0] Adr;
 
 //wire [DATA_WIDTH-1:0] ALUOut;
 //--------------------------------------------------
-wire [DATA_WIDTH-1:0] Write_Data;
+
 wire [DATA_WIDTH-1:0] Data;
 
 wire [DATA_WIDTH-1:0] SrcA,SrcB;
@@ -113,11 +117,17 @@ wire [1:0] DataSel;
 
 
 //----- Fetch Stage
+Mux2x1 jalr_mux ( 
+													.Selector(PCJalSrcE), 
+													.I_0(PCTargetE), 
+													.I_1(ALUResultE), 
+													.Mux_Out(BranJumpTargetE)
+							 );
 
 Mux2x1 IF_mux ( 
-													.Selector(Mux_IF_sel), 
+													.Selector(PCSrcE), 
 													.I_0(PCPlus4F), 
-													.I_1(adder_EX_res), 
+													.I_1(BranJumpTargetE), 
 													.Mux_Out(pc_next)
 							 );
 
@@ -132,7 +142,7 @@ Reg_param  #
 									(
 												  .rst(reset), 
 												  .clk(clk), 
-												  .enable(1'b1), 
+												  .enable(~StallF),  //1'b1
 												  .D(pc_next), 
 												  .Q(pcF)
 							      );
@@ -158,7 +168,7 @@ IF_ID pip_reg0 (
 													.clk(clk),
 													.reset(reset),
 													.clear(FlushD),
-													.enable(StallD),
+													.enable(~StallD),
 													.InstrF(InstrF),
 													.PCF(pcF),
 													.PCPlus4F(PCPlus4F),
@@ -187,18 +197,18 @@ rv32i_imm_gen imm_gen  (
 												  .rd(InstrD[11:7]),
 												  .funct7(InstrD[31:25]),
 												  .imm_in(InstrD[31:20]),
-												  .imm(Sign_Imm)
+												  .imm(ImmExtD)
 												 );
 												 
-assign Sign_ImmD = Sign_Imm;
+//assign Sign_ImmD = Sign_Imm;
 								
 							
 Reg_File Reg_file      (
 													.A1(InstrD[19:15]),  
 													.A2(InstrD[24:20]), 
-													.A3(InstrD[11:7]),
+													.A3(RdW),
 												   .rst(reset), .clk(clk), 
-											   	.WE3(RegWriteW), .WD3(Write_Data),
+											   	.WE3(RegWriteW), .WD3(ResultW),
 													.RD1(rd1D), .RD2(rd2D)
                        );
 
@@ -215,7 +225,7 @@ ID_IEx pip_reg1       (
 													.Rs1D(Rs1D), 
 													.Rs2D(Rs2D), 
 													.RdD(RdD), 
-													.ImmExtD(Sign_ImmD), 
+													.ImmExtD(ImmExtD), 
 													.PCPlus4D(PCPlus4D),
 													.OpD(OpD),
 												   .Funct7D(Funct7D),
@@ -228,7 +238,7 @@ ID_IEx pip_reg1       (
 													.Rs1E(Rs1E), 
 													.Rs2E(Rs2E), 
 													.RdE(RdE), 
-													.ImmExtE(Sign_ImmE), 
+													.ImmExtE(ImmExtE), 
 													.PCPlus4E(PCPlus4E),
 													
 													.OpE(OpE),
@@ -238,11 +248,12 @@ ID_IEx pip_reg1       (
 							 
 Mux4x1 forwardMuxA (
 
-                                       .Selector(2'b00),//ForwardAE
+                                       //.Selector(2'b00),//ForwardAE
+													.Selector(ForwardAE),
 													.I_0(rd1E),
-													.I_1(32'b0),
-													.I_2(32'b0),
-													.I_3(32'b0),
+													.I_1(ResultW),
+													.I_2(ALUResultM),
+													.I_3(32'b0),//no-use
 													.Mux_Out(SrcAEfor)
                  
                    );
@@ -259,11 +270,12 @@ Mux2x1 srcamux    (
 							 
 Mux4x1 forwardMuxB (
 
-                                       .Selector(2'b00),//ForwardEB
-													.I_0(Rs2E),
-													.I_1(32'b0),
-													.I_2(32'b0),
-													.I_3(32'b0),
+                                       //.Selector(2'b00),//ForwardEB
+													.Selector(ForwardBE),
+													.I_0(rd2E),
+													.I_1(ResultW),
+													.I_2(ALUResultM),
+													.I_3(32'b0), // no-use
 													.Mux_Out(WriteDataE)
                  
                    );
@@ -271,27 +283,28 @@ Mux4x1 forwardMuxB (
 Mux4x1 srcbmux    (
 													.Selector(ALUSrcBE),
 													.I_0(WriteDataE),
-													.I_1(32'b0),
-													.I_2(32'b0),
-													.I_3(32'b0),
+													.I_1(ImmExtE),
+													.I_2(PCTargetE),
+													.I_3(32'b0), //no-use
 													.Mux_Out(SrcBE)
 						    );
 							 
 ALU Adder_EX         (
 													.Control(4'b0000),
 													.A(pcE), 
-													.B(Sign_ImmE),
+													.B(ImmExtE),
 													.Result(PCTargetE) // Next PC for jump and branch instruction
 							);
 							
-ALU Alu              (
-													.Control(ALUControlE),
-													.A(SrcAE),
-													.B(SrcBE),
-													.Result(ALUResultE)
+alu2 Alu0            (
+													
+													.SrcA(SrcAE), 
+													.SrcB(SrcBE), 
+													.ALUControl(ALUControlE) , 
+													.ALUResult(ALUResultE), 
+													.Zero(ZeroE), .Sign(SignE)
                      );
 							
-assign ZeroE = !ALUResultE;
 					
 //----- Execute - Memory Access Pipeline Register
 							
@@ -304,12 +317,11 @@ IEx_IMem pipreg2     (
 													.WriteDataE(WriteDataE), 
 													.RdE(RdE), 
 													.PCPlus4E(PCPlus4E),
-													.ZeroE(ZeroE),
 													.ALUResultM(ALUResultM), 
 													.WriteDataM(WriteDataM),
 													.RdM(RdM), 
-													.PCPlus4M(PCPlus4M),
-													.ZeroM(ZeroM)
+													.PCPlus4M(PCPlus4M)
+													
                     );
 							 
 
@@ -389,12 +401,14 @@ IMem_IWB pipreg3     (
 							);
 			
 			
-		  
-Mux2x1 Write_data_mux ( 
+//mux3 resultmux( ALUResultW, ReadDataW, PCPlus4W, ResultSrcW, ResultW);		  
+Mux4x1 Write_data_mux ( 
 													.Selector(MemtoRegW), 
 													.I_0(ALUResultW), 
 													.I_1(ReadDataW), 
-													.Mux_Out(Write_Data)
+													.I_2(PCPlus4W),
+													.I_3(32'b0), //no-use
+													.Mux_Out(ResultW)
 							 );
 							  
 

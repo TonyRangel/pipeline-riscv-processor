@@ -11,7 +11,7 @@ input      [1:0] ResultSrcM,
 output reg       RegWriteW, 
 output reg [1:0] ResultSrcW);
 
-    always @( posedge clk, posedge reset ) begin
+    always @( negedge clk, posedge reset ) begin
         if (reset) begin
             RegWriteW <= 0;
             ResultSrcW <= 0;           

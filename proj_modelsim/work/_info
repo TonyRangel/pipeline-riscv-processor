@@ -1,0 +1,952 @@
+m255
+K4
+z2
+Z0 !s99 nomlopt
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+R0
+!s11f vlog 2021.2 2021.04, Apr 14 2021
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA_lite/21.1
+T_opt
+!s110 1683171847
+Ve?dF2HdNlaG]6`JS0_7cg2
+04 18 4 work RISC_V_Pipeline_tb fast 0
+=1-98e7432a607c-64532a07-1ab-4c0c
+!s124 OEM10U103 
+o-quiet -auto_acc_if_foreign -work work +acc
+Z1 tCvgOpt 0
+n@_opt
+OL;O;2021.2;73
+vALU
+Z2 !s110 1683171838
+!i10b 1
+!s100 CdbFi<dH_=NX@z[551V@B1
+IXSEiLA]V`?LSf^;4gX^>h1
+Z3 dC:/My_Designs/QuartusPrime/RISC_V_Pipeline/proj_modelsim
+w1682962106
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ALU.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ALU.v
+!i122 738
+Z4 L0 7 27
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2021.2;73
+r1
+!s85 0
+31
+Z7 !s108 1683171838.000000
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ALU.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ALU.v|
+!i113 0
+Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R1
+n@a@l@u
+valu2
+R2
+!i10b 1
+!s100 V:5ZYKhWK>5m5:TJ7GfW^0
+IXKP4]B^Xz[e3NH2H[T<NJ1
+R3
+w1682962391
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/alu2.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/alu2.v
+!i122 739
+L0 8 33
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/alu2.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/alu2.v|
+!i113 0
+R8
+R1
+valudec
+R2
+!i10b 1
+!s100 z;EdOfa3@iF2g6==k4]ej2
+IV<U[a0jdG^FMa6lEfDc6Q3
+R3
+w1682821766
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/aludec.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/aludec.v
+!i122 735
+L0 9 37
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/aludec.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/aludec.v|
+!i113 0
+R8
+R1
+vBit_Rate_Pulse
+Z9 !s110 1683171835
+!i10b 1
+!s100 DYUQlA[=k;AQXWgD>KL^;2
+IKgBg9U1zGiVNOdU5lIJ_X3
+R3
+Z10 w1681877461
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Bit_Rate_Pulse.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Bit_Rate_Pulse.v
+!i122 706
+R4
+R5
+R6
+r1
+!s85 0
+31
+Z11 !s108 1683171835.000000
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Bit_Rate_Pulse.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Bit_Rate_Pulse.v|
+!i113 0
+R8
+R1
+n@bit_@rate_@pulse
+vc_ID_IEx
+R2
+!i10b 1
+!s100 gZB@7Q7KCk;eY^`FHINV22
+IHhQ_9@cj4[]XdScHk?l=01
+R3
+w1683063040
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_ID_IEx.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_ID_IEx.v
+!i122 733
+L0 6 51
+R5
+R6
+r1
+!s85 0
+31
+Z12 !s108 1683171837.000000
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_ID_IEx.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_ID_IEx.v|
+!i113 0
+R8
+R1
+nc_@i@d_@i@ex
+vc_IEx_IM
+Z13 !s110 1683171837
+!i10b 1
+!s100 VT7@^2^2K84[?V_iL?k2k0
+IB`1iW2EB4nmZzG[X^DHF50
+R3
+w1683065793
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_IEx_IM.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_IEx_IM.v
+!i122 732
+Z14 L0 6 22
+R5
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_IEx_IM.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_IEx_IM.v|
+!i113 0
+R8
+R1
+nc_@i@ex_@i@m
+vc_IM_IW
+R2
+!i10b 1
+!s100 VhQk@e[mKJJW`JL>8N]M^1
+If`^lZWjORoPJ1m0kh3eez0
+R3
+w1683065813
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_IM_IW.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_IM_IW.v
+!i122 734
+L0 7 21
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_IM_IW.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_IM_IW.v|
+!i113 0
+R8
+R1
+nc_@i@m_@i@w
+vcontrol_signals
+R2
+!i10b 1
+!s100 Y6``9nca?@^N?k@_P7_IY3
+I^WFM:<ZU;YcLn=Bee@Xz@0
+R3
+w1683049881
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/control_signals.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/control_signals.v
+!i122 737
+L0 7 63
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/control_signals.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/control_signals.v|
+!i113 0
+R8
+R1
+vcontroller
+R2
+!i10b 1
+!s100 fY:0Y2A4XiO`^2DHz]K1_3
+IBN5<1Co:SYHmKzmcgk3cY1
+R3
+w1683049983
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/controller.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/controller.v
+!i122 736
+L0 9 109
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/controller.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/controller.v|
+!i113 0
+R8
+R1
+vCounter_Param
+R9
+!i10b 1
+!s100 PND9bPG?H;h=hl@Bei]?73
+I8HN]h>EKWL:fS<bmDl<^X1
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Counter_Param.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Counter_Param.v
+!i122 707
+L0 6 23
+R5
+R6
+r1
+!s85 0
+31
+R11
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Counter_Param.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Counter_Param.v|
+!i113 0
+R8
+R1
+n@counter_@param
+vData_Memory
+R9
+!i10b 1
+!s100 S:j`C4oIQF1Z5`R^QChlN0
+IVJ5PRORnhD6`zH=V@S6_D3
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Memory.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Memory.v
+!i122 708
+L0 7 41
+R5
+R6
+r1
+!s85 0
+31
+R11
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Memory.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Memory.v|
+!i113 0
+R8
+R1
+n@data_@memory
+vData_Path
+Z15 !s110 1683171839
+!i10b 1
+!s100 TSF9<]Omh]e??G17NO=hZ0
+IPZC;eiUZXd[l8AZ]]jV5G1
+R3
+w1683171815
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v
+!i122 742
+L0 7 421
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v|
+!i113 0
+R8
+R1
+n@data_@path
+vDecoder_Onehot
+R9
+!i10b 1
+!s100 J^EzGKoW9=XHPCn=UU5;[2
+IZGcN@@k[hg`c[F6UnbBe`3
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Decoder_Onehot.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Decoder_Onehot.v
+!i122 709
+L0 7 44
+R5
+R6
+r1
+!s85 0
+31
+R11
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Decoder_Onehot.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Decoder_Onehot.v|
+!i113 0
+R8
+R1
+n@decoder_@onehot
+vFF_D_2enable
+R9
+!i10b 1
+!s100 kzoB]]z<dYUL]PjVIRo1_3
+IjADP91]]V[j:T]jhWWmiL2
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FF_D_2enable.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FF_D_2enable.v
+!i122 710
+R14
+R5
+R6
+r1
+!s85 0
+31
+R11
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FF_D_2enable.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FF_D_2enable.v|
+!i113 0
+R8
+R1
+n@f@f_@d_2enable
+vFF_D_enable
+R9
+!i10b 1
+!s100 _Fm[o]<EJ@JIL?n2WWD5?0
+I`1WT>F^KZM`O6d]ff_m@Z2
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FF_D_enable.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FF_D_enable.v
+!i122 711
+L0 6 18
+R5
+R6
+r1
+!s85 0
+31
+R11
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FF_D_enable.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FF_D_enable.v|
+!i113 0
+R8
+R1
+n@f@f_@d_enable
+vFSM_UART_rx
+Z16 !s110 1683171836
+!i10b 1
+!s100 KMFTY54>Q29<A::5ciNEN3
+I0>VT]IWLSKI]66F=Mi2e=0
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FSM_UART_rx.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FSM_UART_rx.v
+!i122 712
+L0 3 159
+R5
+R6
+r1
+!s85 0
+31
+R11
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FSM_UART_rx.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FSM_UART_rx.v|
+!i113 0
+R8
+R1
+n@f@s@m_@u@a@r@t_rx
+vFSM_UART_tx
+R16
+!i10b 1
+!s100 >jUzzWHd2UfW^2Q;hDnn;2
+I=LG:V<DOe2^acEmjDSW?=0
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FSM_UART_tx.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FSM_UART_tx.v
+!i122 713
+L0 7 130
+R5
+R6
+r1
+!s85 0
+31
+Z17 !s108 1683171836.000000
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FSM_UART_tx.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FSM_UART_tx.v|
+!i113 0
+R8
+R1
+n@f@s@m_@u@a@r@t_tx
+vGPIO
+R16
+!i10b 1
+!s100 mP;EC?d7ZdGbbSz3DB4=21
+II^>`jVa5S2E>inI`eg3;h2
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/GPIO.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/GPIO.v
+!i122 714
+L0 1 32
+R5
+R6
+r1
+!s85 0
+31
+R17
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/GPIO.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/GPIO.v|
+!i113 0
+R8
+R1
+n@g@p@i@o
+vhazardunit
+R15
+!i10b 1
+!s100 5?NH^UiY28jjPTEX30lT50
+IWKV8WJ71KR7gV<zY;fC>=2
+R3
+w1683167820
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/hazardunit.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/hazardunit.v
+!i122 745
+L0 7 51
+R5
+R6
+r1
+!s85 0
+31
+Z18 !s108 1683171839.000000
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/hazardunit.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/hazardunit.v|
+!i113 0
+R8
+R1
+vID_IEx
+R13
+!i10b 1
+!s100 2eg0:bI^;De^f<WQ@mBi]2
+IITEfc3eDRC:cJ>jXX7m0@1
+R3
+w1683063085
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v
+!i122 730
+L0 7 68
+R5
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v|
+!i113 0
+R8
+R1
+n@i@d_@i@ex
+vIEx_IMem
+R2
+!i10b 1
+!s100 ]K7>UM]XZm<JfZZi6B0md3
+I7OK:mPlMZ4d>3a4jTlZ1A2
+R3
+w1683065766
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IEx_IMem.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IEx_IMem.v
+!i122 740
+L0 6 30
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IEx_IMem.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IEx_IMem.v|
+!i113 0
+R8
+R1
+n@i@ex_@i@mem
+vIF_ID
+R13
+!i10b 1
+!s100 zG`H95g=IHO`IlCYdTMSc0
+Ik<iRnnhAb`WY6JVnKAoh82
+R3
+w1683047613
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IF_ID.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IF_ID.v
+!i122 729
+L0 5 28
+R5
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IF_ID.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IF_ID.v|
+!i113 0
+R8
+R1
+n@i@f_@i@d
+vIMem_IWB
+R13
+!i10b 1
+!s100 7KmnbVTX^4@:`S;fMH:O50
+IR??[n=7XenFWO_P9PVl;01
+R3
+w1683065778
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IMem_IWB.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IMem_IWB.v
+!i122 731
+L0 8 28
+R5
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IMem_IWB.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IMem_IWB.v|
+!i113 0
+R8
+R1
+n@i@mem_@i@w@b
+vMemory_Controller
+R16
+!i10b 1
+!s100 =eP@`VY26S1``@zYfYcB91
+IB?bL_PAHHU]<3N8@=_PTT2
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Memory_Controller.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Memory_Controller.v
+!i122 715
+L0 1 58
+R5
+R6
+r1
+!s85 0
+31
+R17
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Memory_Controller.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Memory_Controller.v|
+!i113 0
+R8
+R1
+n@memory_@controller
+vMux
+R16
+!i10b 1
+!s100 <:mKLh]^EN=@=e;lIa;Da1
+IXT<DdFiF;_?8EJ`JR2kO10
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux.v
+!i122 716
+L0 7 77
+R5
+R6
+r1
+!s85 0
+31
+R17
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux.v|
+!i113 0
+R8
+R1
+n@mux
+vMux2x1
+R16
+!i10b 1
+!s100 ]JOz9o<Hi?1b]2mR?R5U21
+InJnToA7KfRH9?;C]THllB0
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v
+!i122 717
+L0 7 18
+R5
+R6
+r1
+!s85 0
+31
+R17
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v|
+!i113 0
+R8
+R1
+n@mux2x1
+vMux4x1
+R16
+!i10b 1
+!s100 SR?W[:`k_LXfb>nh9IJm13
+IcXz^91fkIQ[0NNmPY7`lJ1
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v
+!i122 718
+Z19 L0 7 20
+R5
+R6
+r1
+!s85 0
+31
+R17
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v|
+!i113 0
+R8
+R1
+n@mux4x1
+vProgram_Memory
+R15
+!i10b 1
+!s100 o5gGY]d[=HozzG9;<Uf>N3
+I9CLffGEBF=C?9UfK57;7E0
+R3
+w1683166336
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Program_Memory.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Program_Memory.v
+!i122 744
+L0 7 39
+R5
+R6
+r1
+!s85 0
+31
+R18
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Program_Memory.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Program_Memory.v|
+!i113 0
+R8
+R1
+n@program_@memory
+vReg_File
+R16
+!i10b 1
+!s100 g>fRNXBh?:nV[oeUMBBP[2
+IT>DB<ST[ZJXZlic3K<3S;0
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v
+!i122 719
+L0 7 131
+R5
+R6
+r1
+!s85 0
+31
+R17
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v|
+!i113 0
+R8
+R1
+n@reg_@file
+vReg_param
+R16
+!i10b 1
+!s100 mn?AMkn2<XiEg6Wb@e>K^0
+I8LDU1K`cPDTfCeoEbaPOY0
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_param.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_param.v
+!i122 720
+R19
+R5
+R6
+r1
+!s85 0
+31
+R17
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_param.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_param.v|
+!i113 0
+R8
+R1
+n@reg_param
+vRegister
+R16
+!i10b 1
+!s100 ZH8;8Bzb0DEecH^E^Y6Lo1
+Iba]F1dYCA9:5Zn6g;VK8R2
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Register.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Register.v
+!i122 721
+L0 10 19
+R5
+R6
+r1
+!s85 0
+31
+R17
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Register.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Register.v|
+!i113 0
+R8
+R1
+n@register
+vRISC_V_Pipeline
+R2
+!i10b 1
+!s100 RWdj3e0_Hmj74PL=B61CW2
+IN0Mh>mJKKI53DfV1A3Vz53
+R3
+w1683171358
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v
+!i122 741
+L0 7 133
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v|
+!i113 0
+R8
+R1
+n@r@i@s@c_@v_@pipeline
+vRISC_V_Pipeline_tb
+R15
+!i10b 1
+!s100 `91BAke<Rm;@bT2E5SS8I3
+I7j6mJnU;F6MQeh7BzKoW;0
+R3
+w1683047597
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline_tb.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline_tb.v
+!i122 743
+L0 8 29
+R5
+R6
+r1
+!s85 0
+31
+R18
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline_tb.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline_tb.v|
+!i113 0
+R8
+R1
+n@r@i@s@c_@v_@pipeline_tb
+vrv32i_imm_gen
+R16
+!i10b 1
+!s100 A1M0T9e;;TjHnnVOmfZSM1
+IHj^B=0JWHU9jE4nBA1OA]1
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/rv32i_imm_gen.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/rv32i_imm_gen.v
+!i122 722
+L0 1 72
+R5
+R6
+r1
+!s85 0
+31
+R17
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/rv32i_imm_gen.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/rv32i_imm_gen.v|
+!i113 0
+R8
+R1
+vRXshift_register
+R13
+!i10b 1
+!s100 JhX32:<I_j3@Khe:7ZHaC3
+IQXNLbNJmYgl`7j_ndeQJ[3
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RXshift_register.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RXshift_register.v
+!i122 723
+L0 1 26
+R5
+R6
+r1
+!s85 0
+31
+R17
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RXshift_register.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RXshift_register.v|
+!i113 0
+R8
+R1
+n@r@xshift_register
+vshift_left_one
+R13
+!i10b 1
+!s100 3GTO`oc>`gUjF3Xk5@H<k2
+IaMl5k6<^Bzj]QFo?aDQ3D3
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/shift_left_one.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/shift_left_one.v
+!i122 724
+L0 1 12
+R5
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/shift_left_one.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/shift_left_one.v|
+!i113 0
+R8
+R1
+vTXshift_register
+R13
+!i10b 1
+!s100 ZWmCEL0LznnoZai[OaIS;0
+Ib;EgG?Ah=FO;[1[NgaY6m2
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/TXshift_register.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/TXshift_register.v
+!i122 725
+L0 1 29
+R5
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/TXshift_register.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/TXshift_register.v|
+!i113 0
+R8
+R1
+n@t@xshift_register
+vUART
+R13
+!i10b 1
+!s100 M`A^`7=6a30>mC43>0j7c3
+I:<9fL8LfRQ=Kf09`za6J60
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART.v
+!i122 726
+L0 1 56
+R5
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART.v|
+!i113 0
+R8
+R1
+n@u@a@r@t
+vUART_RX
+R13
+!i10b 1
+!s100 kkP0oz@e>Fkm]138<0I]k0
+InofizPd0:lOj<=DY^Xc<V3
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_RX.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_RX.v
+!i122 727
+L0 1 51
+R5
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_RX.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_RX.v|
+!i113 0
+R8
+R1
+n@u@a@r@t_@r@x
+vUART_TX
+R13
+!i10b 1
+!s100 9WO_h@84<7T4CS1IbizCo0
+I<34az@bURE09X@_b5a83=1
+R3
+R10
+8C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_TX.v
+FC:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_TX.v
+!i122 728
+L0 2 76
+R5
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_TX.v|
+!s90 -reportprogress|300|-work|work|-vopt|-stats=none|C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_TX.v|
+!i113 0
+R8
+R1
+n@u@a@r@t_@t@x

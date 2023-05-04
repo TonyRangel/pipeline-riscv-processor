@@ -9,19 +9,17 @@ input  clk, reset,
 input      [31:0] ALUResultE, WriteDataE, 
 input      [4:0]  RdE, 
 input      [31:0] PCPlus4E,
-input             ZeroE,
+
 output reg [31:0] ALUResultM, WriteDataM,
 output reg [4:0]  RdM, 
-output reg [31:0] PCPlus4M,
-output reg        ZeroM);
+output reg [31:0] PCPlus4M);
 
-always @( posedge clk, posedge reset ) begin 
+always @( negedge clk, posedge reset ) begin 
     if (reset) begin
         ALUResultM <= 0;
         WriteDataM <= 0;
         RdM <= 0; 
         PCPlus4M <= 0;
-		  ZeroM <= 0;
     end
 
     else begin
@@ -29,7 +27,7 @@ always @( posedge clk, posedge reset ) begin
         WriteDataM <= WriteDataE;
         RdM <= RdE; 
         PCPlus4M <= PCPlus4E;
-        ZeroM <= ZeroE;     
+             
     end
     
 end

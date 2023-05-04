@@ -27,9 +27,9 @@ assign ADDRIn = Address - 32'h00400000;
 
 	initial begin
 
-		//$readmemh("C:/My_Designs/QuartusPrime/RISC_V_Single_Cycle/assembly_code/sll_slli_andi_and.txt", rom);
-		//$readmemh("C:/My_Designs/QuartusPrime/RISC_V_Single_Cycle/assembly_code/tarea_gpio.txt", rom);
-		$readmemh("C:/My_Designs/QuartusPrime/RISC_V_Single_Cycle/assembly_code/factorial_uart.txt", rom);
+		//$readmemh("C:/My_Designs/QuartusPrime/RISC_V_Pipeline/assembly_code/addi.txt", rom);
+		$readmemh("C:/My_Designs/QuartusPrime/RISC_V_Pipeline/assembly_code/matriz_x_vector.txt", rom);
+		
 		
 		
 		

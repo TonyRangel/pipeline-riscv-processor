@@ -27,7 +27,7 @@ module ID_IEx  (
 
 	 
 
-    always @( posedge clk, posedge reset ) begin
+    always @( negedge clk, posedge reset ) begin
         if (reset) begin
             RD1E <= 0;
             RD2E <= 0;

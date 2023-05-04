@@ -1,0 +1,2939 @@
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# 39 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 22:40:25 on May 01,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "FSM_UART_rx(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "FSM_UART_tx(fast)".
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2685) [TFMPC] - Too few port connections for 'DataPath'.  Expected 32, found 22.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs2E'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs1E'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs2D'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs1D'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'ForwardBE'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'ForwardAE'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'StallE'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'StallD'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'FlushD'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Mux_IF_sel'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline_tb.v(19): (vopt-2685) [TFMPC] - Too few port connections for 'UUT'.  Expected 7, found 6.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline_tb.v(19): (vopt-2718) [TFMPC] - Missing connection for port 'clk_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=13.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'I_0'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/forwardMuxB File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 262
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 400
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/clk
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/Pc/Q
+run
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/IF_mux/I_0 \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/IF_mux/I_1 \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/IF_mux/Mux_Out \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/IF_mux/Selector
+add wave -position 1  sim:/RISC_V_Pipeline_tb/rst
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=13.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'I_0'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/forwardMuxB File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 262
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 400
+run
+add wave -position end  sim:/RISC_V_Pipeline_tb/UUT/DataPath/Add_IF/A
+add wave -position end  sim:/RISC_V_Pipeline_tb/UUT/DataPath/Add_IF/B
+add wave -position end  sim:/RISC_V_Pipeline_tb/UUT/DataPath/Add_IF/Control
+add wave -position end  sim:/RISC_V_Pipeline_tb/UUT/DataPath/Add_IF/Result
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=13.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'I_0'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/forwardMuxB File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 262
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 400
+run
+add wave -position end  sim:/RISC_V_Pipeline_tb/UUT/DataPath/ROM/Instruction
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=13.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'I_0'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/forwardMuxB File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 262
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 400
+run
+add wave -position end  sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg0/InstrF
+add wave -position 12  sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg0/enable
+add wave -position 12  sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg0/clk
+add wave -position 14  sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg0/clear
+add wave -position end  sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg0/InstrD
+add wave -position end  sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg0/PCD
+add wave -position end  sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg0/PCPlus4D
+add wave -position 16  sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg0/PCPlus4F
+add wave -position 16  sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg0/PCF
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=13.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'I_0'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/forwardMuxB File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 262
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 400
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/My_Designs/QuartusPrime/RISC_V_Pipeline/proj_modelsim/IF_stage
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# 39 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 23:02:16 on May 01,2023, Elapsed time: 0:21:51
+# Errors: 0, Warnings: 20
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 23:02:16 on May 01,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2685) [TFMPC] - Too few port connections for 'DataPath'.  Expected 32, found 23.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs2E'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs1E'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs2D'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs1D'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'ForwardBE'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'ForwardAE'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'StallE'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'StallD'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Mux_IF_sel'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=10.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'I_0'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/forwardMuxB File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 262
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 400
+source IF_stage
+run
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# 39 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 23:08:18 on May 01,2023, Elapsed time: 0:06:02
+# Errors: 0, Warnings: 17
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 23:08:18 on May 01,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2685) [TFMPC] - Too few port connections for 'DataPath'.  Expected 32, found 24.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs2E'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs1E'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs2D'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs1D'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'ForwardBE'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'ForwardAE'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'StallE'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Mux_IF_sel'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=9.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'I_0'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/forwardMuxB File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 262
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 400
+source IF_stage
+run
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# 39 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 23:15:12 on May 01,2023, Elapsed time: 0:06:54
+# Errors: 0, Warnings: 16
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 23:15:12 on May 01,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'I_0'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/forwardMuxB File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 262
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 400
+source IF_stage
+run
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# 39 compiles, 0 failed with no errors.
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/My_Designs/QuartusPrime/RISC_V_Pipeline/proj_modelsim/IF_stage
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 11:04:11 on May 02,2023, Elapsed time: 11:48:59
+# Errors: 0, Warnings: 7
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 11:04:11 on May 02,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'I_0'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/forwardMuxB File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 262
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 400
+source IF_stage
+run
+# Compile of IF_ID.v was successful.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 11:11:22 on May 02,2023, Elapsed time: 0:07:11
+# Errors: 0, Warnings: 7
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 11:11:22 on May 02,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'I_0'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/forwardMuxB File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 262
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 400
+source IF_stage
+run
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# 39 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 11:17:18 on May 02,2023, Elapsed time: 0:05:56
+# Errors: 0, Warnings: 7
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 11:17:18 on May 02,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline_tb.v(19): (vopt-2685) [TFMPC] - Too few port connections for 'UUT'.  Expected 7, found 6.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline_tb.v(19): (vopt-2718) [TFMPC] - Missing connection for port 'clk_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'I_0'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/forwardMuxB File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 262
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 400
+source IF_stage
+run
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 11:21:05 on May 02,2023, Elapsed time: 0:03:47
+# Errors: 0, Warnings: 8
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 11:21:05 on May 02,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'I_0'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/forwardMuxB File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 262
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 400
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/A1 \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/A2 \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/A3 \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/clk \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/RD1 \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/RD2 \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/WD3 \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/WE3
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/imm_gen/funct3 \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/imm_gen/funct7 \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/imm_gen/imm \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/imm_gen/imm_in \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/imm_gen/opcode \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/imm_gen/rd \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/imm_gen/rs1 \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/imm_gen/rs2
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/Funct3D \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/Funct7D \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/ImmExtD \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/OpD \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/PCD \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/PCPlus4D \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/RD1D \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/RD2D \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/RdD
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg0/ALUControlD \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg0/ALUSrcAD \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg0/ALUSrcBD \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg0/BranchD \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg0/JumpD \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg0/MemWriteD \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg0/RegWriteD \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg0/ResultSrcD
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/My_Designs/QuartusPrime/RISC_V_Pipeline/proj_modelsim/ID_stage
+run
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# 39 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 11:42:29 on May 02,2023, Elapsed time: 0:21:24
+# Errors: 0, Warnings: 7
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 11:42:29 on May 02,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'I_0'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/forwardMuxB File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 262
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 400
+source ID_stage
+run
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# 39 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 11:55:16 on May 02,2023, Elapsed time: 0:12:47
+# Errors: 0, Warnings: 7
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 11:55:16 on May 02,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'I_0'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/forwardMuxB File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 262
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 400
+source ID_stage
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/My_Designs/QuartusPrime/RISC_V_Pipeline/proj_modelsim/ID_stage
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 15:26:54 on May 02,2023, Elapsed time: 3:31:38
+# Errors: 0, Warnings: 6
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 15:26:54 on May 02,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'I_0'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/forwardMuxB File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 262
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 400
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/clk
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/ImmExtD
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/ImmExtE
+add wave -position insertpoint sim:/RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1/*
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/My_Designs/QuartusPrime/RISC_V_Pipeline/proj_modelsim/IDEX
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# 39 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 15:33:28 on May 02,2023, Elapsed time: 0:06:34
+# Errors: 0, Warnings: 7
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 15:33:28 on May 02,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 112
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 119
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 210
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (5) for port 'I_0'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux4x1.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/forwardMuxB File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 262
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 400
+source IDEX
+run
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# 39 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 11:25:40 on May 03,2023, Elapsed time: 19:52:12
+# Errors: 0, Warnings: 7
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 11:25:40 on May 03,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2685) [TFMPC] - Too few port connections for 'DataPath'.  Expected 32, found 24.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs2E'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs1E'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs2D'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs1D'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'ForwardBE'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'ForwardAE'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'StallE'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Mux_IF_sel'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=9.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 122
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'WD3'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Reg_file File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 201
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 213
+# ** Warning: (vsim-3015) [PCDPC] - Port size (1) does not match connection size (2) for port 'Selector'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(9).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 398
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg0/MemWriteE \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg0/RegWriteE
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg0/MemWriteD \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg0/RegWriteD
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg1/MemWriteE \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg1/RegWriteE
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg1/MemWriteM \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg1/RegWriteM
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg2/ResultSrcM \
+sim:/RISC_V_Pipeline_tb/UUT/control/c_pipreg2/ResultSrcW
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/My_Designs/QuartusPrime/RISC_V_Pipeline/proj_modelsim/RegWrite_flow
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# 39 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 11:47:53 on May 03,2023, Elapsed time: 0:22:13
+# Errors: 0, Warnings: 16
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 11:47:53 on May 03,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2685) [TFMPC] - Too few port connections for 'DataPath'.  Expected 32, found 24.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs2E'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs1E'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs2D'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Rs1D'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'ForwardBE'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'ForwardAE'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'StallE'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(77): (vopt-2718) [TFMPC] - Missing connection for port 'Mux_IF_sel'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=9.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 122
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'WD3'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Reg_file File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 201
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 213
+source RegWrite_flow
+run
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/a2/Q
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=9.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 122
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'WD3'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Reg_file File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 201
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 213
+run
+run
+run
+run
+add wave -position insertpoint sim:/RISC_V_Pipeline_tb/UUT/DataPath/Alu0/*
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=9.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 122
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'WD3'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Reg_file File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 201
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 213
+run
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/pipreg2/ALUResultE \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/pipreg2/ALUResultM
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=9.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 122
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'WD3'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Reg_file File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 201
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 213
+run
+add wave -position 0  sim:/RISC_V_Pipeline_tb/clk
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/pipreg3/ALUResultM \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/pipreg3/ALUResultW
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=9.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 122
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'WD3'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Reg_file File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 201
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 213
+run
+run
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux/I_0 \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux/Mux_Out \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/Write_data_mux/Selector
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=9.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 122
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'WD3'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Reg_file File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 201
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 213
+run
+run
+add wave -position insertpoint  \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/clk \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/WD3 \
+sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/WE3
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=9.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 122
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'WD3'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v(12).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/Reg_file File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 201
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 213
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/My_Designs/QuartusPrime/RISC_V_Pipeline/proj_modelsim/RegWrite_flow
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# 39 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 15:41:34 on May 03,2023, Elapsed time: 3:53:41
+# Errors: 0, Warnings: 15
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 15:41:34 on May 03,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 122
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 213
+source RegWrite_flow
+run
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/My_Designs/QuartusPrime/RISC_V_Pipeline/proj_modelsim/RegWrite_flow
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# 39 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 15:58:51 on May 03,2023, Elapsed time: 0:17:17
+# Errors: 0, Warnings: 5
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 15:58:51 on May 03,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 122
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 213
+source RegWrite_flow
+run
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# 39 compiles, 0 failed with no errors.
+add wave -position end  sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/a5/Q
+add wave -position end  sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/s5/Q
+add wave -position end  sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/a3/Q
+add wave -position end  sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/s11/Q
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/My_Designs/QuartusPrime/RISC_V_Pipeline/proj_modelsim/RegWrite_flow
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 20:17:51 on May 03,2023, Elapsed time: 4:19:00
+# Errors: 0, Warnings: 5
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 20:17:51 on May 03,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 122
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 213
+source RegWrite_flow
+run
+run
+run
+add wave -position end  sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/s0/Q
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'Mux_Out'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(14).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/jalr_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 115
+# ** Warning: (vsim-3015) [PCDPC] - Port size (32) does not match connection size (1) for port 'I_1'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux2x1.v(11).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/IF_mux File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 122
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 213
+run
+run
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/My_Designs/QuartusPrime/RISC_V_Pipeline/proj_modelsim/RegWrite_flow
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# 39 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 21:18:20 on May 03,2023, Elapsed time: 1:00:29
+# Errors: 0, Warnings: 5
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 21:18:20 on May 03,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Error: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(76): Module 'hazardunit' is not defined.
+#  For instance 'h' at path 'RISC_V_Pipeline_tb.UUT'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
+# Error loading design
+# End time: 21:18:21 on May 03,2023, Elapsed time: 0:00:01
+# Errors: 1, Warnings: 1
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of hazardunit.v was successful.
+# 40 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 21:19:58 on May 03,2023
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Note: (vopt-143) Recognized 1 FSM in module "FSM_UART_rx(fast)".
+# ** Note: (vopt-143) Recognized 1 FSM in module "FSM_UART_tx(fast)".
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(96): (vopt-2685) [TFMPC] - Too few port connections for 'DataPath'.  Expected 35, found 34.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(96): (vopt-2718) [TFMPC] - Missing connection for port 'Mux_IF_sel'.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline_tb.v(19): (vopt-2685) [TFMPC] - Too few port connections for 'UUT'.  Expected 7, found 6.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline_tb.v(19): (vopt-2718) [TFMPC] - Missing connection for port 'clk_out'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=4.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.hazardunit(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 218
+source RegWrite_flow
+run
+run
+run
+run
+add wave -position 0  sim:/RISC_V_Pipeline_tb/UUT/DataPath/Pc/D
+add wave -position 1  sim:/RISC_V_Pipeline_tb/UUT/DataPath/Pc/enable
+add wave -position 2  sim:/RISC_V_Pipeline_tb/UUT/DataPath/Pc/Q
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/My_Designs/QuartusPrime/RISC_V_Pipeline/proj_modelsim/RegWrite_flow
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of hazardunit.v was successful.
+# 40 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 21:28:23 on May 03,2023, Elapsed time: 0:08:25
+# Errors: 0, Warnings: 9
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 21:28:23 on May 03,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.hazardunit(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 218
+source RegWrite_flow
+run
+add wave -position end  sim:/RISC_V_Pipeline_tb/UUT/h/StallF
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.hazardunit(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 218
+run
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of hazardunit.v was successful.
+# 40 compiles, 0 failed with no errors.
+write format wave -window .main_pane.wave.interior.cs.body.pw.wf C:/My_Designs/QuartusPrime/RISC_V_Pipeline/proj_modelsim/RegWrite_flow
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 21:36:58 on May 03,2023, Elapsed time: 0:08:35
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 21:36:58 on May 03,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(96): (vopt-2685) [TFMPC] - Too few port connections for 'DataPath'.  Expected 35, found 34.
+# ** Warning: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline.v(96): (vopt-2718) [TFMPC] - Missing connection for port 'Mux_IF_sel'.
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=2.
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.hazardunit(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 218
+source RegWrite_flow
+run
+run
+add wave -position end  sim:/RISC_V_Pipeline_tb/UUT/DataPath/Pc/enable
+run
+run
+run
+run
+run
+run
+run
+run
+run
+run
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 21:40:46 on May 03,2023, Elapsed time: 0:03:48
+# Errors: 0, Warnings: 4
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 21:40:46 on May 03,2023
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.hazardunit(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 218
+
+
+source IF_stage
+run
+# Compile of Bit_Rate_Pulse.v was successful.
+# Compile of Counter_Param.v was successful.
+# Compile of Data_Memory.v was successful.
+# Compile of Decoder_Onehot.v was successful.
+# Compile of FF_D_2enable.v was successful.
+# Compile of FF_D_enable.v was successful.
+# Compile of FSM_UART_rx.v was successful.
+# Compile of FSM_UART_tx.v was successful.
+# Compile of GPIO.v was successful.
+# Compile of Memory_Controller.v was successful.
+# Compile of Mux.v was successful.
+# Compile of Mux2x1.v was successful.
+# Compile of Mux4x1.v was successful.
+# Compile of Reg_File.v was successful.
+# Compile of Reg_param.v was successful.
+# Compile of Register.v was successful.
+# Compile of rv32i_imm_gen.v was successful.
+# Compile of RXshift_register.v was successful.
+# Compile of shift_left_one.v was successful.
+# Compile of TXshift_register.v was successful.
+# Compile of UART.v was successful.
+# Compile of UART_RX.v was successful.
+# Compile of UART_TX.v was successful.
+# Compile of IF_ID.v was successful.
+# Compile of ID_IEx.v was successful.
+# Compile of IMem_IWB.v was successful.
+# Compile of c_IEx_IM.v was successful.
+# Compile of c_ID_IEx.v was successful.
+# Compile of c_IM_IW.v was successful.
+# Compile of aludec.v was successful.
+# Compile of controller.v was successful.
+# Compile of control_signals.v was successful.
+# Compile of ALU.v was successful.
+# Compile of alu2.v was successful.
+# Compile of IEx_IMem.v was successful.
+# Compile of RISC_V_Pipeline.v was successful.
+# Compile of Data_Path.v was successful.
+# Compile of RISC_V_Pipeline_tb.v was successful.
+# Compile of Program_Memory.v was successful.
+# Compile of hazardunit.v was successful.
+# 40 compiles, 0 failed with no errors.
+vsim -voptargs=+acc work.RISC_V_Pipeline_tb
+# End time: 21:44:07 on May 03,2023, Elapsed time: 0:03:21
+# Errors: 0, Warnings: 3
+# vsim -voptargs="+acc" work.RISC_V_Pipeline_tb 
+# Start time: 21:44:07 on May 03,2023
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.hazardunit(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 218
+source RegWrite_flow
+run
+run
+run
+add wave -position 27  sim:/RISC_V_Pipeline_tb/UUT/DataPath/Reg_file/s1/Q
+restart -f
+# ** Note: (vsim-12125) Error and warning message counts have been reset to '0' because of 'restart'.
+# ** Note: (vsim-8009) Loading existing optimized design _opt
+# Loading work.RISC_V_Pipeline_tb(fast)
+# Loading work.RISC_V_Pipeline(fast)
+# Loading work.controller(fast)
+# Loading work.control_signals(fast)
+# Loading work.aludec(fast)
+# Loading work.c_ID_IEx(fast)
+# Loading work.c_IEx_IM(fast)
+# Loading work.c_IM_IW(fast)
+# Loading work.hazardunit(fast)
+# Loading work.Data_Path(fast)
+# Loading work.Mux2x1(fast)
+# Loading work.Reg_param(fast)
+# Loading work.Program_Memory(fast)
+# Loading work.ALU(fast)
+# Loading work.IF_ID(fast)
+# Loading work.rv32i_imm_gen(fast)
+# Loading work.Reg_File(fast)
+# Loading work.Decoder_Onehot(fast)
+# Loading work.Reg_param(fast__1)
+# Loading work.Reg_param(fast__2)
+# Loading work.Mux(fast)
+# Loading work.ID_IEx(fast)
+# Loading work.Mux4x1(fast)
+# Loading work.alu2(fast)
+# Loading work.IEx_IMem(fast)
+# Loading work.Memory_Controller(fast)
+# Loading work.Data_Memory(fast)
+# Loading work.UART(fast)
+# Loading work.Register(fast)
+# Loading work.UART_TX(fast)
+# Loading work.Bit_Rate_Pulse(fast)
+# Loading work.FSM_UART_tx(fast)
+# Loading work.Counter_Param(fast)
+# Loading work.TXshift_register(fast)
+# Loading work.FF_D_2enable(fast)
+# Loading work.UART_RX(fast)
+# Loading work.Bit_Rate_Pulse(fast__1)
+# Loading work.FSM_UART_rx(fast)
+# Loading work.FF_D_enable(fast)
+# Loading work.RXshift_register(fast)
+# Loading work.GPIO(fast)
+# Loading work.IMem_IWB(fast)
+# ** Warning: (vsim-3015) [PCDPC] - Port size (5) does not match connection size (32) for port 'RdD'. The port definition is at: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v(10).
+#    Time: 0 ps  Iteration: 0  Instance: /RISC_V_Pipeline_tb/UUT/DataPath/pip_reg1 File: C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Path.v Line: 218
+run
+run
+run
+# End time: 21:49:40 on May 03,2023, Elapsed time: 0:05:33
+# Errors: 0, Warnings: 2

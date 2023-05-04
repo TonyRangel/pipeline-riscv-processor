@@ -16,7 +16,7 @@ output reg [1:0] ALUSrcBE,
 output reg [1:0] ResultSrcE,
 output reg [3:0] ALUControlE);
 
-always @( posedge clk, posedge reset ) begin
+always @( negedge clk, posedge reset ) begin
 
 		if (reset) begin
 			RegWriteE <= 0;

@@ -13,7 +13,7 @@ module IMem_IWB(input             clk, reset,
                 output reg [4:0]  RdW, 
                 output reg [31:0] PCPlus4W);
 
-always @( posedge clk, posedge reset ) begin 
+always @( negedge clk, posedge reset ) begin 
     if (reset) begin
         ALUResultW <= 0;
         ReadDataW <= 0;
