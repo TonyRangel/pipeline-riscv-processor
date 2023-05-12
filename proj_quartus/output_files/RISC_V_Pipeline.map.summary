@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Wed May  3 21:43:45 2023
+Analysis & Synthesis Status : Successful - Fri May 12 16:36:31 2023
 Quartus Prime Version : 21.1.1 Build 850 06/23/2022 SJ Lite Edition
 Revision Name : RISC_V_Pipeline
 Top-level Entity Name : RISC_V_Pipeline
 Family : Cyclone V
 Logic utilization (in ALMs) : N/A
-Total registers : 0
+Total registers : 3395
 Total pins : 21
 Total virtual pins : 0
 Total block memory bits : 0

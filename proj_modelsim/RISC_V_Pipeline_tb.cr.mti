@@ -75,12 +75,12 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	RISC_V_Pipeline
 
-} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_ID_IEx.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_ID_IEx.v
+} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/alu2.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/alu2.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module c_ID_IEx
+-- Compiling module alu2
 
 Top level modules:
-	c_ID_IEx
+	alu2
 
 } {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/controller.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/controller.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -89,19 +89,12 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	controller
 
-} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/alu2.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/alu2.v
+} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_ID_IEx.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_ID_IEx.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module alu2
+-- Compiling module c_ID_IEx
 
 Top level modules:
-	alu2
-
-} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART.v
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module UART
-
-Top level modules:
-	UART
+	c_ID_IEx
 
 } {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RXshift_register.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RXshift_register.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -109,6 +102,13 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 
 Top level modules:
 	RXshift_register
+
+} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module UART
+
+Top level modules:
+	UART
 
 } {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IEx_IMem.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IEx_IMem.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -124,19 +124,19 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	c_IEx_IM
 
-} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_RX.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_RX.v
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module UART_RX
-
-Top level modules:
-	UART_RX
-
 } {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_File.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module Reg_File
 
 Top level modules:
 	Reg_File
+
+} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_RX.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_RX.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module UART_RX
+
+Top level modules:
+	UART_RX
 
 } {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/aludec.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/aludec.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -145,19 +145,19 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	aludec
 
-} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/TXshift_register.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/TXshift_register.v
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module TXshift_register
-
-Top level modules:
-	TXshift_register
-
 } {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_param.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Reg_param.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module Reg_param
 
 Top level modules:
 	Reg_param
+
+} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/TXshift_register.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/TXshift_register.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module TXshift_register
+
+Top level modules:
+	TXshift_register
 
 } {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_IM_IW.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/c_IM_IW.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -166,19 +166,19 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	c_IM_IW
 
-} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_TX.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_TX.v
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module UART_TX
-
-Top level modules:
-	UART_TX
-
 } {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FF_D_2enable.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FF_D_2enable.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module FF_D_2enable
 
 Top level modules:
 	FF_D_2enable
+
+} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_TX.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/UART_TX.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module UART_TX
+
+Top level modules:
+	UART_TX
 
 } {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline_tb.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/RISC_V_Pipeline_tb.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -187,19 +187,19 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	RISC_V_Pipeline_tb
 
-} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IMem_IWB.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IMem_IWB.v
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module IMem_IWB
-
-Top level modules:
-	IMem_IWB
-
 } {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/control_signals.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/control_signals.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module control_signals
 
 Top level modules:
 	control_signals
+
+} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IMem_IWB.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IMem_IWB.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module IMem_IWB
+
+Top level modules:
+	IMem_IWB
 
 } {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/rv32i_imm_gen.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/rv32i_imm_gen.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -208,40 +208,12 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	rv32i_imm_gen
 
-} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/hazardunit.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/hazardunit.v
+} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module hazardunit
+-- Compiling module Mux
 
 Top level modules:
-	hazardunit
-
-} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module ID_IEx
-
-Top level modules:
-	ID_IEx
-
-} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ALU.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ALU.v
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module ALU
-
-Top level modules:
-	ALU
-
-} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Bit_Rate_Pulse.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Bit_Rate_Pulse.v
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module Bit_Rate_Pulse
-
-Top level modules:
-	Bit_Rate_Pulse
-
-} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Memory.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Memory.v
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module Data_Memory
-
-Top level modules:
-	Data_Memory
+	Mux
 
 } {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FSM_UART_rx.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FSM_UART_rx.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -250,12 +222,40 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	FSM_UART_rx
 
-} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Mux.v
+} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Memory.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Data_Memory.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module Mux
+-- Compiling module Data_Memory
 
 Top level modules:
-	Mux
+	Data_Memory
+
+} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Bit_Rate_Pulse.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Bit_Rate_Pulse.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module Bit_Rate_Pulse
+
+Top level modules:
+	Bit_Rate_Pulse
+
+} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ALU.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ALU.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ALU
+
+Top level modules:
+	ALU
+
+} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/ID_IEx.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module ID_IEx
+
+Top level modules:
+	ID_IEx
+
+} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/hazardunit.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/hazardunit.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module hazardunit
+
+Top level modules:
+	hazardunit
 
 } {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IF_ID.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/IF_ID.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
@@ -264,18 +264,18 @@ Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 Top level modules:
 	IF_ID
 
-} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FSM_UART_tx.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FSM_UART_tx.v
-Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
--- Compiling module FSM_UART_tx
-
-Top level modules:
-	FSM_UART_tx
-
 } {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Memory_Controller.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/Memory_Controller.v
 Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
 -- Compiling module Memory_Controller
 
 Top level modules:
 	Memory_Controller
+
+} {} {}} C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FSM_UART_tx.v {1 {vlog -work work -vopt -stats=none C:/My_Designs/QuartusPrime/RISC_V_Pipeline/src/FSM_UART_tx.v
+Questa Intel Starter FPGA Edition-64 vlog 2021.2 Compiler 2021.04 Apr 14 2021
+-- Compiling module FSM_UART_tx
+
+Top level modules:
+	FSM_UART_tx
 
 } {} {}}

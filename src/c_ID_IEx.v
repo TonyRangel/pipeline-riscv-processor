@@ -6,12 +6,12 @@
 module c_ID_IEx (
 
 input clk, reset, clear,
-input RegWriteD, MemWriteD, JumpD, BranchD, ALUSrcAD,
+input RegWriteD, MemWriteD, JumpD, BranchD, BranchnD, ALUSrcAD,
 input [1:0] ALUSrcBD,
 input [1:0] ResultSrcD, 
 input [3:0] ALUControlD,
   
-output reg RegWriteE, MemWriteE, JumpE, BranchE,  ALUSrcAE,
+output reg RegWriteE, MemWriteE, JumpE, BranchE, BranchnE,  ALUSrcAE,
 output reg [1:0] ALUSrcBE,
 output reg [1:0] ResultSrcE,
 output reg [3:0] ALUControlE);
@@ -23,6 +23,7 @@ always @( negedge clk, posedge reset ) begin
 			MemWriteE <= 0;
 			JumpE <= 0;
 			BranchE <= 0; 
+			BranchnE <= 0; 
 			ALUSrcAE <= 0;
 			ALUSrcBE <= 0;
 			ResultSrcE <= 0;
@@ -33,7 +34,8 @@ always @( negedge clk, posedge reset ) begin
 			RegWriteE <= 0;
 			MemWriteE <= 0;
 			JumpE <= 0;
-			BranchE <= 0; 
+			BranchE <= 0;
+		   BranchnE <= 0; 	
 			ALUSrcAE <= 0;
 			ALUSrcBE <= 0;
 			ResultSrcE <= 0;
@@ -45,6 +47,7 @@ always @( negedge clk, posedge reset ) begin
 			MemWriteE <= MemWriteD;
 			JumpE <= JumpD;
 			BranchE <= BranchD; 
+			BranchnE <= BranchnD;
 			ALUSrcAE <= ALUSrcAD;
 			ALUSrcBE <= ALUSrcBD;
 			ResultSrcE <= ResultSrcD;

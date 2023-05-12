@@ -367,7 +367,7 @@ UART uart_0
 								.rst(reset),
 								.wrtEn(UARTen),
 								.addr(NADDR[2]),
-								.TxData(),//rd2
+								.TxData(WriteDataM),//rd2
 								.ReadReg(UARTData),
 								.SerialOut(uart_tx),
 								.SerialIn(uart_rx)

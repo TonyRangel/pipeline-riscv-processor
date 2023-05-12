@@ -57,6 +57,7 @@ module RISC_V_Pipeline
 									.op(Op_w),
 									.funct3(Funct3_w),
 									.funct7b5(Funct7_w[5]),
+									.funct7b1(Funct7_w[0]),
 									.ZeroE(Zero_w),
 									.SignE(Sign_w),
 									.FlushE(FlushE),

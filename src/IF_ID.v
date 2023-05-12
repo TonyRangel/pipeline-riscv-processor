@@ -9,7 +9,7 @@ module IF_ID (
 );
 
   //always_ff @(posedge clk, posedge reset) begin
-  always @(negedge clk, posedge reset) begin
+  always @( negedge clk, posedge reset) begin
     if (reset) begin // Asynchronous Clear
       InstrD <= 0;
       PCD <= 0;

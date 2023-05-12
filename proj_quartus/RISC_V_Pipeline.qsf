@@ -83,7 +83,7 @@ set_global_assignment -name VERILOG_FILE ../src/Bit_Rate_Pulse.v
 set_global_assignment -name POWER_PRESET_COOLING_SOLUTION "23 MM HEAT SINK WITH 200 LFPM AIRFLOW"
 set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name VERILOG_FILE ../src/IF_ID.v
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_NETLIST_TYPE POST_FIT -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VERILOG_FILE ../src/ID_IEx.v
@@ -99,4 +99,27 @@ set_global_assignment -name VERILOG_FILE ../src/ALU.v
 set_global_assignment -name VERILOG_FILE ../src/alu2.v
 set_global_assignment -name VERILOG_FILE ../src/RISC_V_Pipeline_tb.v
 set_global_assignment -name VERILOG_FILE ../src/hazardunit.v
+set_location_assignment PIN_AH3 -to uart_tx
+set_location_assignment PIN_AH5 -to uart_rx
+set_location_assignment PIN_AA30 -to reset
+set_location_assignment PIN_AC22 -to clk_out
+set_location_assignment PIN_AF14 -to clk
+set_location_assignment PIN_AA24 -to GPIO_out[0]
+set_location_assignment PIN_AB23 -to GPIO_out[1]
+set_location_assignment PIN_AC23 -to GPIO_out[2]
+set_location_assignment PIN_AD24 -to GPIO_out[3]
+set_location_assignment PIN_AG25 -to GPIO_out[4]
+set_location_assignment PIN_AF25 -to GPIO_out[5]
+set_location_assignment PIN_AE24 -to GPIO_out[6]
+set_location_assignment PIN_AF24 -to GPIO_out[7]
+set_location_assignment PIN_AB30 -to GPIO_in[0]
+set_location_assignment PIN_Y27 -to GPIO_in[1]
+set_location_assignment PIN_AB28 -to GPIO_in[2]
+set_location_assignment PIN_AC30 -to GPIO_in[3]
+set_location_assignment PIN_W25 -to GPIO_in[4]
+set_location_assignment PIN_V25 -to GPIO_in[5]
+set_location_assignment PIN_AC28 -to GPIO_in[6]
+set_location_assignment PIN_AD30 -to GPIO_in[7]
+set_global_assignment -name ENABLE_SIGNALTAP ON
+set_global_assignment -name USE_SIGNALTAP_FILE output_files/stp1.stp
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
